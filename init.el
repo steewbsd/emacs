@@ -49,6 +49,12 @@
 (defun hl-asterisk ()
   "Force highlight asterisks in c-mode-hook."
   (font-lock-add-keywords nil '(("[*]" 0 font-lock-keyword-face t))))
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+
+;; hooks
 (add-hook 'org-mode-hook        #'org-html-themify-mode)
 (add-hook 'prog-mode-hook       #'yas-minor-mode)
 (add-hook 'prog-mode-hook       #'smartparens-mode)
@@ -63,3 +69,4 @@
 (global-set-key (kbd "C-:")     #'er/expand-region)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (global-set-key (kbd "C-x C-n") #'dired-sidebar-toggle-sidebar)
+(global-set-key (kbd "C-x w")   #'writeroom-mode)
