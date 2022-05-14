@@ -8,8 +8,8 @@
 (setq default-frame-alist
       '((fullscreen . maximized)
         (font . "Cascadia Code 16")))
-(setq inhibit-splash-screen t)
 
+(setq inhibit-splash-screen t)
 (setq custom-file
       (concat user-emacs-directory "custom.el"))
 (if (file-exists-p custom-file)
@@ -31,7 +31,8 @@
 
 ;;; requires
 (dolist (pkg
-         '(all-the-icons-ivy-rich
+         '(
+           all-the-icons-ivy-rich
            company
            dashboard
            diredfl
@@ -42,6 +43,7 @@
            ivy-rich
            ivy-yasnippet
            monokai-theme
+           no-littering
            pinentry
            rainbow-delimiters
            smart-mode-line
@@ -49,15 +51,15 @@
            swiper
            volatile-highlights
            yasnippet
-           no-littering))
+           ))
   (unless (package-installed-p pkg)
     (package-install pkg))
   (require pkg))
 
 ;;; startup
-(dashboard-setup-startup-hook )
 (all-the-icons-ivy-rich-mode t)
 (beacon-mode                 t)
+(dashboard-setup-startup-hook )
 (diredfl-global-mode          )
 (global-company-mode         t)
 (global-flycheck-mode        t)
@@ -66,31 +68,16 @@
 (ivy-rich-mode               t)
 (load-theme 'monokai         t)
 (menu-bar-mode               0)
+(pinentry-start               )
 (tool-bar-mode               0)
 (volatile-highlights-mode    t)
-(pinentry-start               )
 
-(setq ivy-use-virtual-buffers   t)
+;;; package setq's
 (setq ivy-height                15)
+(setq ivy-use-virtual-buffers   t)
 (setq ivy-use-virtual-buffers   t)
 (setq sml/theme                 'atom-one-dark)
 (sml/setup                      t)
-
-;;(load-file (concat user-emacs-directory "packages/hare-mode/hare-mode.el"))
-(load-file (concat user-emacs-directory "packages/ligature/ligature.el"))
-
-;;; hooks
-;; function definitions
-(defun hl-custom ()
-  "Force custom theme highlight in c-mode-hook."
-  (font-lock-add-keywords nil '(("[*0-9]" 0 font-lock-keyword-face t))))
-(defun kill-other-buffers ()
-  "Kill all other buffers."
-  (interactive)
-  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
-(defun freebsd-style ()
-  "Enable FreeBSD style for C buffers."
-  (progn (load-file "/usr/src/tools/tools/editing/freebsd.el") (bsd)))
 (ligature-set-ligatures 'prog-mode '("|||>" "<|||" "<==>" "<!--" "####" "~~>" "***" "||=" "||>"
                                      ":::" "::=" "=:=" "===" "==>" "=!=" "=>>" "=<<" "=/=" "!=="
                                      "!!." ">=>" ">>=" ">>>" ">>-" ">->" "->>" "-->" "---" "-<<"
@@ -104,28 +91,44 @@
                                      "##" "#(" "#?" "#_" "%%" ".=" ".-" ".." ".?" "+>" "++" "?:"
                                      "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
                                      "\\\\" "://"))
-;; hooks
-(add-hook 'prog-mode-hook           #'ligature-mode)
-(add-hook 'org-mode-hook            #'org-html-themify-mode)
-(add-hook 'prog-mode-hook           #'yas-minor-mode)
-(add-hook 'prog-mode-hook           #'smartparens-mode)
-(add-hook 'c-mode-hook              #'hl-custom)
+
+;;(load-file (concat user-emacs-directory "packages/hare-mode/hare-mode.el"))
+(load-file (concat user-emacs-directory "packages/ligature/ligature.el"))
+
+;;; function definitions
+(defun hl-custom ()
+  "Force custom theme highlight in c-mode-hook."
+  (font-lock-add-keywords nil '(("[*0-9]" 0 font-lock-keyword-face t))))
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+(defun freebsd-style ()
+  "Enable FreeBSD style for C buffers."
+  (progn (load-file "/usr/src/tools/tools/editing/freebsd.el") (bsd)))
+
+;;; hooks
 (add-hook 'c-mode-hook              #'freebsd-style)
+(add-hook 'c-mode-hook              #'hl-custom)
 (add-hook 'eshell-mode-hook         #'eshell-syntax-highlighting-mode)
+(add-hook 'org-mode-hook            #'org-html-themify-mode)
+(add-hook 'prog-mode-hook           #'ligature-mode)
 (add-hook 'prog-mode-hook           #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook           #'smartparens-mode)
+(add-hook 'prog-mode-hook           #'yas-minor-mode)
 ;; global-set-key
-(global-set-key (kbd "C-=")         #'text-scale-increase)
 (global-set-key (kbd "C--")         #'text-scale-decrease)
-(global-set-key (kbd "C-s")         #'swiper-isearch)
-(global-set-key (kbd "M-x")         #'counsel-M-x)
-(global-set-key (kbd "C-c y")       #'ivy-yasnippet)
 (global-set-key (kbd "C-:")         #'er/expand-region)
+(global-set-key (kbd "C-=")         #'text-scale-increase)
+(global-set-key (kbd "C-c e")       #'eshell)
 (global-set-key (kbd "C-c l")       #'display-line-numbers-mode)
+(global-set-key (kbd "C-c y")       #'ivy-yasnippet)
+(global-set-key (kbd "C-s")         #'swiper-isearch)
 (global-set-key (kbd "C-x C-f")     #'counsel-find-file)
+(global-set-key (kbd "C-x C-k a")   #'kill-other-buffers)
 (global-set-key (kbd "C-x C-n")     #'dired-sidebar-toggle-sidebar)
 (global-set-key (kbd "C-x w")       #'writeroom-mode)
-(global-set-key (kbd "C-x C-k a")   #'kill-other-buffers)
-(global-set-key (kbd "C-c e")       #'eshell)
+(global-set-key (kbd "M-x")         #'counsel-M-x)
 
 ;;; init.el ends here
 (put 'overwrite-mode 'disabled t)
