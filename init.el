@@ -1,13 +1,18 @@
 ;;; -*- lexical-binding: t; -*-
 ;;; Code:
 
+;; Prevent initial white flash on startup
+(set-background-color "#171717")
+
 (setq gc-cons-threshold most-positive-fixnum)
 ;;(setq native-comp-deferred-compilation nil)
 (setq read-process-output-max (* 1024 1024))
-
+(setq initial-frame-alist
+      '((height . 30)
+        (width . 80)))
 (setq default-frame-alist
-      '((fullscreen . maximized)
-        (font . "Cascadia Code 16")))
+      '(;(fullscreen . maximized)
+        (font . "Cascadia Code 18")))
 
 (setq inhibit-splash-screen t)
 (setq custom-file
@@ -23,8 +28,12 @@
 (add-to-list
  'package-archives
  '("melpa" . "https://melpa.org/packages/"))
-
-(package-initialize)
+(unless 'package-archive-contents
+  (dolist '(
+            (package-refresh-contents)
+            (package-initialize)
+            )))
+;;(package-initialize)
 
 ;; setq before package init
 (setq monokai-background "#171717")
@@ -39,9 +48,11 @@
            expand-region
            flycheck
            ivy
+           ivy-posframe
            ivy-prescient
            ivy-rich
            ivy-yasnippet
+           keycast
            monokai-theme
            no-littering
            pinentry
@@ -64,10 +75,13 @@
 (global-company-mode         t)
 (global-flycheck-mode        t)
 (ivy-mode                    t)
+(ivy-posframe-mode)
 (ivy-prescient-mode          t)
 (ivy-rich-mode               t)
+(keycast-mode                t)
 (load-theme 'monokai         t)
 (menu-bar-mode               0)
+(scroll-bar-mode             0)
 (pinentry-start               )
 (tool-bar-mode               0)
 (volatile-highlights-mode    t)
@@ -78,22 +92,25 @@
 (setq ivy-use-virtual-buffers   t)
 (setq sml/theme                 'atom-one-dark)
 (sml/setup                      t)
-(ligature-set-ligatures 'prog-mode '("|||>" "<|||" "<==>" "<!--" "####" "~~>" "***" "||=" "||>"
-                                     ":::" "::=" "=:=" "===" "==>" "=!=" "=>>" "=<<" "=/=" "!=="
-                                     "!!." ">=>" ">>=" ">>>" ">>-" ">->" "->>" "-->" "---" "-<<"
-                                     "<~~" "<~>" "<*>" "<||" "<|>" "<$>" "<==" "<=>" "<=<" "<->"
-                                     "<--" "<-<" "<<=" "<<-" "<<<" "<+>" "</>" "###" "#_(" "..<"
-                                     "..." "+++" "/==" "///" "_|_" "www" "&&" "^=" "~~" "~@" "~="
-                                     "~>" "~-" "**" "*>" "*/" "||" "|}" "|]" "|=" "|>" "|-" "{|"
-                                     "[|" "]#" "::" ":=" ":>" ":<" "$>" "==" "=>" "!=" "!!" ">:"
-                                     ">=" ">>" ">-" "-~" "-|" "->" "--" "-<" "<~" "<*" "<|" "<:"
-                                     "<$" "<=" "<>" "<-" "<<" "<+" "</" "#{" "#[" "#:" "#=" "#!"
-                                     "##" "#(" "#?" "#_" "%%" ".=" ".-" ".." ".?" "+>" "++" "?:"
-                                     "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
-                                     "\\\\" "://"))
+(setq dashboard-startup-banner
+      (concat user-emacs-directory "themes/emacs-p.svg"))
+(load-file (concat user-emacs-directory
+                   "packages/ligature/ligature.el"))
 
-;;(load-file (concat user-emacs-directory "packages/hare-mode/hare-mode.el"))
-(load-file (concat user-emacs-directory "packages/ligature/ligature.el"))
+(ligature-set-ligatures 'prog-mode
+                        '("|||>" "<|||" "<==>" "<!--" "####" "~~>" "***" "||=" "||>"
+                          ":::" "::=" "=:=" "===" "==>" "=!=" "=>>" "=<<" "=/=" "!=="
+                          "!!." ">=>" ">>=" ">>>" ">>-" ">->" "->>" "-->" "---" "-<<"
+                          "<~~" "<~>" "<*>" "<||" "<|>" "<$>" "<==" "<=>" "<=<" "<->"
+                          "<--" "<-<" "<<=" "<<-" "<<<" "<+>" "</>" "###" "#_(" "..<"
+                          "..." "+++" "/==" "///" "_|_" "www" "&&" "^=" "~~" "~@" "~="
+                          "~>" "~-" "**" "*>" "*/" "||" "|}" "|]" "|=" "|>" "|-" "{|"
+                          "[|" "]#" "::" ":=" ":>" ":<" "$>" "==" "=>" "!=" "!!" ">:"
+                          ">=" ">>" ">-" "-~" "-|" "->" "--" "-<" "<~" "<*" "<|" "<:"
+                          "<$" "<=" "<>" "<-" "<<" "<+" "</" "#{" "#[" "#:" "#=" "#!"
+                          "##" "#(" "#?" "#_" "%%" ".=" ".-" ".." ".?" "+>" "++" "?:"
+                          "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
+                          "\\\\" "://"))
 
 ;;; function definitions
 (defun hl-custom ()
