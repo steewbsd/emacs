@@ -7,14 +7,15 @@
 (setq gc-cons-threshold most-positive-fixnum)
 ;;(setq native-comp-deferred-compilation nil)
 (setq read-process-output-max (* 1024 1024))
+
 (setq initial-frame-alist
       '((height . 30)
         (width . 80)))
 (setq default-frame-alist
       '(;(fullscreen . maximized)
         (font . "Cascadia Code 18")))
-
 (setq inhibit-splash-screen t)
+
 (setq custom-file
       (concat user-emacs-directory "custom.el"))
 (if (file-exists-p custom-file)
@@ -28,11 +29,6 @@
 (add-to-list
  'package-archives
  '("melpa" . "https://melpa.org/packages/"))
-(unless 'package-archive-contents
-  (dolist '(
-            (package-refresh-contents)
-            (package-initialize)
-            )))
 ;;(package-initialize)
 
 ;; setq before package init
@@ -83,8 +79,13 @@
 (menu-bar-mode               0)
 (scroll-bar-mode             0)
 (pinentry-start               )
+(pixel-scroll-precision-mode t)
 (tool-bar-mode               0)
 (volatile-highlights-mode    t)
+
+;; smooth-scroll
+(setq pixel-scroll-precision-large-scroll-height 40.0)
+(setq pixel-scroll-precision-interpolation-factor 30)
 
 ;;; package setq's
 (setq ivy-height                15)
@@ -96,20 +97,34 @@
       (concat user-emacs-directory "themes/emacs-p.svg"))
 (load-file (concat user-emacs-directory
                    "packages/ligature/ligature.el"))
-
+(load-file (concat user-emacs-directory
+                   "packages/maple-echoarea/maple-echoarea.el"))
+(maple-echoarea-enable)
 (ligature-set-ligatures 'prog-mode
-                        '("|||>" "<|||" "<==>" "<!--" "####" "~~>" "***" "||=" "||>"
-                          ":::" "::=" "=:=" "===" "==>" "=!=" "=>>" "=<<" "=/=" "!=="
-                          "!!." ">=>" ">>=" ">>>" ">>-" ">->" "->>" "-->" "---" "-<<"
-                          "<~~" "<~>" "<*>" "<||" "<|>" "<$>" "<==" "<=>" "<=<" "<->"
-                          "<--" "<-<" "<<=" "<<-" "<<<" "<+>" "</>" "###" "#_(" "..<"
-                          "..." "+++" "/==" "///" "_|_" "www" "&&" "^=" "~~" "~@" "~="
-                          "~>" "~-" "**" "*>" "*/" "||" "|}" "|]" "|=" "|>" "|-" "{|"
-                          "[|" "]#" "::" ":=" ":>" ":<" "$>" "==" "=>" "!=" "!!" ">:"
-                          ">=" ">>" ">-" "-~" "-|" "->" "--" "-<" "<~" "<*" "<|" "<:"
-                          "<$" "<=" "<>" "<-" "<<" "<+" "</" "#{" "#[" "#:" "#=" "#!"
-                          "##" "#(" "#?" "#_" "%%" ".=" ".-" ".." ".?" "+>" "++" "?:"
-                          "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
+                        '("|||>" "<|||" "<==>" "<!--"
+                          "####" "~~>" "***" "||=" "||>"
+                          ":::" "::=" "=:=" "===" "==>"
+                          "=!=" "=>>" "=<<" "=/=" "!=="
+                          "!!." ">=>" ">>=" ">>>" ">>-"
+                          ">->" "->>" "-->" "---" "-<<"
+                          "<~~" "<~>" "<*>" "<||" "<|>"
+                          "<$>" "<==" "<=>" "<=<" "<->"
+                          "<--" "<-<" "<<=" "<<-" "<<<"
+                          "<+>" "</>" "###" "#_(" "..<"
+                          "..." "+++" "/==" "///" "_|_"
+                          "www" "&&" "^=" "~~" "~@" "~="
+                          "~>" "~-" "**" "*>" "*/" "||"
+                          "|}" "|]" "|=" "|>" "|-" "{|"
+                          "[|" "]#" "::" ":=" ":>" ":<"
+                          "$>" "==" "=>" "!=" "!!" ">:"
+                          ">=" ">>" ">-" "-~" "-|" "->"
+                          "--" "-<" "<~" "<*" "<|" "<:"
+                          "<$" "<=" "<>" "<-" "<<" "<+"
+                          "</" "#{" "#[" "#:" "#=" "#!"
+                          "##" "#(" "#?" "#_" "%%" ".="
+                          ".-" ".." ".?" "+>" "++" "?:"
+                          "?=" "?." "??" ";;" "/*" "/="
+                          "/>" "//" "__" "~~" "(*" "*)"
                           "\\\\" "://"))
 
 ;;; function definitions
@@ -147,5 +162,5 @@
 (global-set-key (kbd "C-x w")       #'writeroom-mode)
 (global-set-key (kbd "M-x")         #'counsel-M-x)
 
-;;; init.el ends here
 (put 'overwrite-mode 'disabled t)
+;;; init.el ends here
