@@ -6654,12 +6654,6 @@
 		(uuid "e591ce17-227c-4861-8157-e2c7d625c49f")
 	)
 	(junction
-		(at 76.2 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e8d38fe3-e863-492d-b20e-0f54ed1e81e0")
-	)
-	(junction
 		(at 67.31 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6706,6 +6700,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f613e9b8-cd73-4dcf-b14e-aa1327b7fa32")
+	)
+	(junction
+		(at 76.2 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f7d30e11-a985-4cdd-84cb-1b3fca87a39f")
 	)
 	(junction
 		(at 34.29 130.81)
@@ -10169,16 +10169,6 @@
 			(type default)
 		)
 		(uuid "f16998b6-dcf6-4746-bdf5-da84479639e7")
-	)
-	(wire
-		(pts
-			(xy 175.26 123.19) (xy 175.26 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1778e4e-8f52-41be-a8f3-9afd8ac48da5")
 	)
 	(wire
 		(pts
@@ -14028,73 +14018,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Flag")
-		(at 175.26 123.19 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "280893d4-81e8-4e5f-ac10-00e7f32e79aa")
-		(property "Reference" "TP4"
-			(at 182.88 120.5229 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint_Flag"
-			(at 176.022 118.364 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
-			(at 180.34 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 180.34 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point (alternative flag-style design)"
-			(at 175.26 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3a91acb1-bae7-4b91-a3d2-8d4907ecce8b")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "TP4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+VDC")
 		(at 76.2 21.59 0)
 		(unit 1)
@@ -17408,81 +17331,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:IRF540N")
-		(at 73.66 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5dbf11bd-288f-4793-b146-4474d1eb5e28")
-		(property "Reference" "Q1"
-			(at 76.962 67.818 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRF540N"
-			(at 76.962 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
-			(at 78.74 73.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
-			(at 78.74 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"
-			(at 73.66 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e190e27e-a8c4-4343-ac30-8ec8686114ac")
-		)
-		(pin "3"
-			(uuid "20347199-6199-4440-9d13-daf26448ecd1")
-		)
-		(pin "1"
-			(uuid "cae92a70-68cb-4b4a-852f-919832fc9db4")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Driver_FET:STGAP2SCM")
 		(at 167.64 41.91 0)
 		(unit 1)
@@ -19528,6 +19376,81 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:IRF540N")
+		(at 73.66 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "838e598a-da8e-4e2e-a3dd-9cc3fe413523")
+		(property "Reference" "Q7"
+			(at 76.962 67.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IRF540N"
+			(at 76.962 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
+			(at 78.74 73.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
+			(at 78.74 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"
+			(at 73.66 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "31575259-7f74-4c92-b6b4-1c7695ffbf08")
+		)
+		(pin "3"
+			(uuid "1e897e41-b844-4b9c-83d9-fc4dd2c62158")
+		)
+		(pin "1"
+			(uuid "0214cdf7-e559-4157-b34e-479836348e1f")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Driver_FET:STGAP2SCM")
 		(at 39.37 118.11 0)
 		(unit 1)
@@ -21050,7 +20973,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 228.092 105.41 90)
 			(effects
 				(font
