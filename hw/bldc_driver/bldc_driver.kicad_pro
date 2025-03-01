@@ -479,26 +479,7 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "/CAN_H": [
-        "CAN_DIFF"
-      ],
-      "/CAN_L": [
-        "CAN_DIFF"
-      ],
-      "/Motor/SHUNT_CURR_P": [
-        "ADC_DATA"
-      ],
-      "/Motor/U_ADC_P": [
-        "ADC_DATA"
-      ],
-      "/Motor/V_ADC_P": [
-        "ADC_DATA"
-      ],
-      "/Motor/W_ADC_P": [
-        "ADC_DATA"
-      ]
-    },
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
