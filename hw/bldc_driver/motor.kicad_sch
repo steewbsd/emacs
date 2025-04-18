@@ -10538,73 +10538,6 @@
 		(uuid "dfad8012-9bce-4f63-9da6-58ebf0fec34e")
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 44.45 138.43 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0004aa72-4293-4c5b-bd2d-43776637a6c5")
-		(property "Reference" "#PWR0104"
-			(at 44.45 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 44.45 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 44.45 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 44.45 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 44.45 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c314a2b0-8950-4566-a6d8-8156cf8dd5d0")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR0104")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Driver_FET:STGAP2SCM")
 		(at 39.37 73.66 0)
 		(unit 1)
@@ -11206,6 +11139,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 52.07 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "095e0ba1-4dd0-4731-9054-31136adec234")
+		(property "Reference" "#PWR0101"
+			(at 52.07 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 51.562 108.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 52.07 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b790cb64-f759-43ae-8857-792903c69488")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 29.21 138.43 0)
 		(unit 1)
@@ -11414,17 +11413,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 173.99 29.21 0)
+		(lib_id "power:GNDPWR")
+		(at 180.34 29.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0b6e556b-5902-4a3f-baad-ebbc39725dda")
-		(property "Reference" "#PWR092"
-			(at 173.99 35.56 0)
+		(uuid "0bc0c4f1-ffe9-4eac-bfa7-30412f458190")
+		(property "Reference" "#PWR089"
+			(at 180.34 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11432,8 +11430,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 173.99 34.29 0)
+		(property "Value" "GNDPWR"
+			(at 179.832 32.766 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11442,7 +11440,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 29.21 0)
+			(at 180.34 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11451,7 +11449,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 29.21 0)
+			(at 180.34 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11459,8 +11457,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 173.99 29.21 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 180.34 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11469,12 +11467,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "76aec0ba-5f5b-4089-a1df-7a377ddff783")
+			(uuid "e1a9f358-fab0-4859-991d-d3101911623c")
 		)
 		(instances
 			(project "bldc_driver"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR092")
+					(reference "#PWR089")
 					(unit 1)
 				)
 			)
@@ -11679,6 +11677,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 44.45 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0c5b3da2-de7f-4734-ab7f-9589ba7fef80")
+		(property "Reference" "#PWR092"
+			(at 44.45 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 43.942 65.786 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 44.45 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "773fb4d7-7c14-4078-b037-99ae282e8956")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR092")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "CL21B104KBCNNNC_1")
 		(lib_id "#inventree:CL21B104KBCNNNC")
 		(at 166.37 137.16 0)
@@ -11871,73 +11935,6 @@
 			(project "bldc_driver"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 45.72 30.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0f38b029-b49a-4aff-8b8b-fa08bbab8b04")
-		(property "Reference" "#PWR088"
-			(at 45.72 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 45.72 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 45.72 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "346a2c36-e594-4fbc-90b1-baa3881bc272")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR088")
 					(unit 1)
 				)
 			)
@@ -12207,73 +12204,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 172.72 68.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "15213731-ae4b-467b-bc38-ce6bc3dee984")
-		(property "Reference" "#PWR0108"
-			(at 172.72 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 172.72 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 172.72 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 172.72 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 172.72 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "75e3b46f-b573-4f1a-aead-be7bff5f00d8")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR0108")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "#inventree:RC0603FR-0712RL")
 		(at 109.22 73.66 90)
 		(unit 1)
@@ -12389,73 +12319,6 @@
 			(project "bldc_driver"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 49.53 138.43 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "17ca970f-c461-4d75-9e1b-ab89331187ae")
-		(property "Reference" "#PWR0105"
-			(at 49.53 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 49.53 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 49.53 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d9a3f7c1-3b18-4577-85ea-9457f3dc5ba5")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -15628,6 +15491,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 45.72 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "41c2e02b-9584-47f5-85ab-ba4684992db1")
+		(property "Reference" "#PWR0100"
+			(at 45.72 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 45.212 108.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 45.72 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "62aa4431-6441-44de-bd0b-888661dd17ad")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "#inventree:CL21B104KBCNNNC")
 		(at 49.53 134.62 0)
 		(unit 1)
@@ -16222,6 +16151,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 172.72 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "47d7fef1-133c-4353-992b-e6b705a1a633")
+		(property "Reference" "#PWR0108"
+			(at 172.72 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 172.212 72.136 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 172.72 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a28c6c90-e4e3-4c66-971a-d8a901136e8c")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR0108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "#inventree:RC0603FR-07470KL")
 		(at 93.98 58.42 0)
 		(unit 1)
@@ -16339,6 +16334,72 @@
 			(project "bldc_driver"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 173.99 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4c1c9e28-6e99-41b7-abfd-2e8ae8a4fe60")
+		(property "Reference" "#PWR088"
+			(at 173.99 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 173.482 32.766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 173.99 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5221aa89-8caa-441a-8708-b3e874a08ee3")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR088")
 					(unit 1)
 				)
 			)
@@ -16943,6 +17004,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 45.72 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "57e67af1-abee-4acc-a46c-626dfc1a81f7")
+		(property "Reference" "#PWR090"
+			(at 45.72 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 45.212 34.036 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 45.72 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc9a86b6-00a9-47e0-b5f9-a8e272e10b87")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR090")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "#inventree:CL21B105KAFNNNE")
 		(at 173.99 25.4 0)
 		(unit 1)
@@ -17134,73 +17261,6 @@
 			(project "bldc_driver"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR061")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 49.53 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5b80e7b1-d279-4e3c-90c1-104aeb70adb9")
-		(property "Reference" "#PWR0101"
-			(at 49.53 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 49.53 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 49.53 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6b6233f1-4935-45aa-85db-937bc4155abb")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -17548,73 +17608,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 180.34 29.21 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6156a8b7-8a5b-4a9d-8caa-71c06eaa965c")
-		(property "Reference" "#PWR093"
-			(at 180.34 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 180.34 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 180.34 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 180.34 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "438a08b6-7a5e-445b-8bfd-9b165b1cbce7")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR093")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Schottky_AKA")
 		(at 87.63 39.37 270)
 		(unit 1)
@@ -17819,73 +17812,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 52.07 105.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6c129f2f-d8b0-4a10-8e7e-26c3f5d121b4")
-		(property "Reference" "#PWR091"
-			(at 52.07 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 52.07 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 52.07 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 52.07 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c9ef159a-ee6a-422a-a306-85ad70bd581e")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR091")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Difference:AMC1200BDWV")
 		(at 125.73 68.58 0)
 		(unit 1)
@@ -18037,25 +17963,15 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "power:GNDPWR")
 		(at 52.07 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6cea9a52-a16f-4471-b8fa-ee57f4d35366")
-		(property "Reference" "#PWR089"
-			(at 52.07 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
+		(uuid "6f0f7c04-58d4-4c1c-ab32-6ba677e3c4a8")
+		(property "Reference" "#PWR091"
 			(at 52.07 35.56 0)
 			(effects
 				(font
@@ -18064,8 +17980,17 @@
 				(hide yes)
 			)
 		)
+		(property "Value" "GNDPWR"
+			(at 51.562 34.036 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(property "Footprint" ""
-			(at 52.07 30.48 0)
+			(at 52.07 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18074,7 +17999,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 30.48 0)
+			(at 52.07 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18082,7 +18007,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
 			(at 52.07 30.48 0)
 			(effects
 				(font
@@ -18092,12 +18017,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "7d03f0a8-7ced-4927-b1c6-629f59abb2f5")
+			(uuid "1ee94f42-21b8-45ea-942e-0a0dbb96e46e")
 		)
 		(instances
 			(project "bldc_driver"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR089")
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 177.8 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6f59ec53-cf98-4053-bf67-cff11f0f4a47")
+		(property "Reference" "#PWR0109"
+			(at 177.8 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 177.292 72.136 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 177.8 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b23c158-a800-4067-9d22-01294074cc97")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -22032,6 +22023,72 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
+		(at 49.53 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b4650100-bbde-4b37-8a7b-a5d8bdd6f2ad")
+		(property "Reference" "#PWR093"
+			(at 49.53 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 49.022 65.786 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 49.53 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b0f56b8-f1f4-4f91-b3e3-726ce432eb8b")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
 		(at 113.03 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22090,140 +22147,6 @@
 			(project "bldc_driver"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR072")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 44.45 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b796f12b-5c83-4d3d-a26f-baecd4b38137")
-		(property "Reference" "#PWR0100"
-			(at 44.45 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 44.45 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 44.45 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 44.45 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 44.45 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b8a1aec0-5dd0-47f9-9f05-f2c59ca3a92e")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR0100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 177.8 68.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b7dcdbd5-f5fe-4bde-9d99-94bf4e65a863")
-		(property "Reference" "#PWR0109"
-			(at 177.8 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 177.8 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 177.8 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 177.8 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9dba69cc-7ac0-44f3-a74b-3c999c095b9f")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -22562,6 +22485,72 @@
 			(project ""
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 44.45 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc6ebdb3-edd6-4e5d-8351-cf2d163e516d")
+		(property "Reference" "#PWR0104"
+			(at 44.45 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 43.942 141.986 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 44.45 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b354981e-573a-4e9c-ad6a-6cfa06b73c82")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -24610,6 +24599,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 49.53 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d9c165f9-f3aa-4314-83e9-479a06512586")
+		(property "Reference" "#PWR0105"
+			(at 49.53 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 49.022 141.986 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 49.53 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "33cc6877-81b5-45c4-921a-9c7affc58894")
+		)
+		(instances
+			(project "bldc_driver"
+				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 31.75 106.68 0)
 		(unit 1)
@@ -24671,73 +24726,6 @@
 			(project "bldc_driver"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR036")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 45.72 105.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dae180af-4352-4916-b73f-80c1f400534d")
-		(property "Reference" "#PWR090"
-			(at 45.72 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 45.72 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 45.72 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3217426b-1a4d-40cf-b231-26b74d005530")
-		)
-		(instances
-			(project "bldc_driver"
-				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
-					(reference "#PWR090")
 					(unit 1)
 				)
 			)

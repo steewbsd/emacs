@@ -132,7 +132,7 @@
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
-        "min_resolved_spokes": 2,
+        "min_resolved_spokes": 1,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
@@ -221,6 +221,10 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 1.4,
+          "drill": 0.8
         }
       ],
       "zones_allow_external_fillets": false
@@ -241,24 +245,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "wire_dangling|1244600|127000|20b0cde5-2544-4e5f-8eeb-94fdff9b2cb3|00000000-0000-0000-0000-000000000000|/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46||",
-        ""
-      ],
-      [
-        "wire_dangling|1676400|152400|ca282c7c-027d-4d6d-b19a-3565ba1acc5f|00000000-0000-0000-0000-000000000000|/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46||",
-        ""
-      ],
-      [
-        "wire_dangling|2540000|127000|238df5e8-e6c9-402a-9635-f0c7465f30a5|00000000-0000-0000-0000-000000000000|/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46||",
-        ""
-      ],
-      [
-        "wire_dangling|393700|139700|78d638fa-686d-4535-aa24-8080cc5a0e37|00000000-0000-0000-0000-000000000000|/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46||",
-        ""
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
