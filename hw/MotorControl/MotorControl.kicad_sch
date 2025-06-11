@@ -22139,7 +22139,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "motor.kicad_sch"
+		(property "Sheetfile" "Motor.kicad_sch"
 			(at 222.25 102.1846 0)
 			(effects
 				(font
@@ -22319,7 +22319,7 @@
 			)
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f"
 					(page "2")
 				)

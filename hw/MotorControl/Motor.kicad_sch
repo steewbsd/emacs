@@ -10614,7 +10614,7 @@
 			(uuid "12b49840-ee82-44ef-9862-c151e117e8c2")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U9")
 					(unit 1)
@@ -10736,7 +10736,7 @@
 			(uuid "1cac66ec-a029-4d83-8c86-70fc66a40ad9")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R2")
 					(unit 1)
@@ -10868,7 +10868,7 @@
 			(uuid "e34d909a-dfb1-40c3-aab2-c82b47b2622d")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C15")
 					(unit 1)
@@ -10933,7 +10933,7 @@
 			(uuid "1c0079b0-5ada-4bcd-a001-d050415695e0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR060")
 					(unit 1)
@@ -10998,7 +10998,7 @@
 			(uuid "1456f7a5-f810-4fc2-8a24-e7ea3d921456")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR062")
 					(unit 1)
@@ -11130,7 +11130,7 @@
 			(uuid "095d9a8e-a239-4625-9390-a42440136f3a")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C17")
 					(unit 1)
@@ -11196,7 +11196,7 @@
 			(uuid "b790cb64-f759-43ae-8857-792903c69488")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0101")
 					(unit 1)
@@ -11263,7 +11263,7 @@
 			(uuid "a9163a88-73e9-4f0a-933d-368c3135de1f")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0102")
 					(unit 1)
@@ -11338,7 +11338,7 @@
 			(uuid "9e250049-09f7-4ac4-8d93-10f4666cf2eb")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "Q4")
 					(unit 1)
@@ -11404,7 +11404,7 @@
 			(uuid "f794bdff-62e7-4e71-bc9c-537040ffbbe0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR025")
 					(unit 1)
@@ -11470,7 +11470,7 @@
 			(uuid "e1a9f358-fab0-4859-991d-d3101911623c")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR089")
 					(unit 1)
@@ -11602,7 +11602,7 @@
 			(uuid "d2b5b7e4-bf46-45de-bbc9-ebed47bdd639")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C7")
 					(unit 1)
@@ -11668,7 +11668,7 @@
 			(uuid "05a5e785-9480-4bc5-9212-9be8a8bda731")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR076")
 					(unit 1)
@@ -11734,7 +11734,7 @@
 			(uuid "773fb4d7-7c14-4078-b037-99ae282e8956")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR092")
 					(unit 1)
@@ -11867,7 +11867,7 @@
 			(uuid "bfa8e601-4867-47fe-a6e0-8d9e7a0408d3")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C14")
 					(unit 1)
@@ -11932,7 +11932,7 @@
 			(uuid "3435d94e-cb5d-428c-a926-610590485cc0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR040")
 					(unit 1)
@@ -11999,7 +11999,7 @@
 			(uuid "eb8bd23b-631b-46fc-8d52-4f76f5c915cf")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR035")
 					(unit 1)
@@ -12065,7 +12065,7 @@
 			(uuid "70ccb5d8-52d3-4e22-8a5b-d50266f6c58b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR030")
 					(unit 1)
@@ -12130,7 +12130,7 @@
 			(uuid "57bf04d3-607d-4226-a27d-2fa3d1a1f7e6")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR045")
 					(unit 1)
@@ -12195,7 +12195,7 @@
 			(uuid "4c3d2403-5821-4c9a-a1fd-810ae04fee52")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR066")
 					(unit 1)
@@ -12316,7 +12316,7 @@
 			(uuid "6e745bdc-84ff-4a35-a647-56912850e381")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R25")
 					(unit 1)
@@ -12437,7 +12437,7 @@
 			(uuid "fa6e304b-f8bd-4c7c-ae2b-12febf8100b5")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R30")
 					(unit 1)
@@ -12569,7 +12569,7 @@
 			(uuid "1eda9713-dd27-485c-b82d-2c5c0e631907")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C54")
 					(unit 1)
@@ -12634,7 +12634,7 @@
 			(uuid "0b534c55-44e0-4201-8c40-df656b7a2dd0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR049")
 					(unit 1)
@@ -12699,7 +12699,7 @@
 			(uuid "14f5b965-b1d3-4bc2-bcf0-1ff83ac6c33b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR082")
 					(unit 1)
@@ -12766,7 +12766,7 @@
 			(uuid "4f70adaf-f108-437c-a70c-e9180626478a")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR038")
 					(unit 1)
@@ -12897,7 +12897,7 @@
 			(uuid "c72001ac-5123-4940-ba52-750005f082e5")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C35")
 					(unit 1)
@@ -13019,7 +13019,7 @@
 			(uuid "be7830b3-bf5d-49f9-8c20-030f83ea9a53")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R40")
 					(unit 1)
@@ -13086,7 +13086,7 @@
 			(uuid "3d4a2257-32ba-499e-bdda-c7834d59b2ce")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "L1")
 					(unit 1)
@@ -13151,7 +13151,7 @@
 			(uuid "98407edb-7b0c-4dbf-bb96-e4f4c7412798")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0112")
 					(unit 1)
@@ -13283,7 +13283,7 @@
 			(uuid "c049207d-e9b3-4174-af57-116655699b89")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C3")
 					(unit 1)
@@ -13405,7 +13405,7 @@
 			(uuid "454d0c19-b071-43c1-937d-9926a0d4835d")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R3")
 					(unit 1)
@@ -13470,7 +13470,7 @@
 			(uuid "a87aaabe-047d-48bb-a2ea-ef55f9baf414")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR079")
 					(unit 1)
@@ -13601,7 +13601,7 @@
 			(uuid "4b56c764-f47c-4665-97b5-58a547ce9cfd")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C11")
 					(unit 1)
@@ -13722,7 +13722,7 @@
 			(uuid "ee4806e1-4b38-42d2-aeb4-098a926376bf")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R22")
 					(unit 1)
@@ -13807,7 +13807,7 @@
 			(uuid "5bdf6681-cb8a-4159-bc57-8cd6bd8b317f")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U3")
 					(unit 1)
@@ -13872,7 +13872,7 @@
 			(uuid "1b7155d4-abd4-4940-b0d7-dd7c153e1cce")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR050")
 					(unit 1)
@@ -13938,7 +13938,7 @@
 			(uuid "41e733cc-c623-4341-9483-b442485b2d72")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR046")
 					(unit 1)
@@ -14005,7 +14005,7 @@
 			(uuid "b65a58b8-2428-46dc-9d8e-e67050b1fe8e")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0106")
 					(unit 1)
@@ -14070,7 +14070,7 @@
 			(uuid "6653c30c-f626-42be-b5b2-50455d85eeef")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR073")
 					(unit 1)
@@ -14192,7 +14192,7 @@
 			(uuid "7e06c778-7060-445b-b983-f8f775e63e5a")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R21")
 					(unit 1)
@@ -14324,7 +14324,7 @@
 			(uuid "e18c9f8d-342b-456d-86ee-56bddea00e69")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C2")
 					(unit 1)
@@ -14389,7 +14389,7 @@
 			(uuid "b01b46c8-dbaa-43de-b081-a49a54da2b2c")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR067")
 					(unit 1)
@@ -14470,7 +14470,7 @@
 			(uuid "fda03c3e-44d9-4715-b3bb-7c6e131035d6")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U6")
 					(unit 1)
@@ -14535,7 +14535,7 @@
 			(uuid "58b5bc4a-1f9d-4d7e-9794-d184d711cf81")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR055")
 					(unit 1)
@@ -14600,7 +14600,7 @@
 			(uuid "d4a2f2ab-dbbb-472d-bb92-2f62e914a05c")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR080")
 					(unit 1)
@@ -14731,7 +14731,7 @@
 			(uuid "b0fac83d-ede3-48ae-b1a1-2d198aa032b9")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C59")
 					(unit 1)
@@ -14797,7 +14797,7 @@
 			(uuid "adb9a62d-ba5d-4efb-827c-29aed6e475a4")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR070")
 					(unit 1)
@@ -14862,7 +14862,7 @@
 			(uuid "7eb12cf4-8e73-4136-94be-d73aad8fd53d")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR053")
 					(unit 1)
@@ -14985,7 +14985,7 @@
 			(uuid "05c8feab-42ef-4bc3-b2d9-6a5c361596e7")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R28")
 					(unit 1)
@@ -15107,7 +15107,7 @@
 			(uuid "77abf6c4-afea-4ed5-a383-54a4ecfd4176")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R34")
 					(unit 1)
@@ -15239,7 +15239,7 @@
 			(uuid "3de0feaa-3a57-44d9-af8f-1405dafc6e3d")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C58")
 					(unit 1)
@@ -15360,7 +15360,7 @@
 			(uuid "3d2998b5-a12b-4994-ad14-455ee465039f")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R39")
 					(unit 1)
@@ -15482,7 +15482,7 @@
 			(uuid "1bd8917f-aa01-4b7d-8870-aa1f697a86b9")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R19")
 					(unit 1)
@@ -15548,7 +15548,7 @@
 			(uuid "62aa4431-6441-44de-bd0b-888661dd17ad")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0100")
 					(unit 1)
@@ -15680,7 +15680,7 @@
 			(uuid "e37622c2-b50e-4029-a040-53590551c717")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C49")
 					(unit 1)
@@ -15745,7 +15745,7 @@
 			(uuid "e7d0009d-c56c-4063-8c45-de5ea3a801ff")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR047")
 					(unit 1)
@@ -15812,7 +15812,7 @@
 			(uuid "737fca39-904f-409c-9e36-4bc241adfd68")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR039")
 					(unit 1)
@@ -15878,7 +15878,7 @@
 			(uuid "42e6daaa-4c25-4031-8b1b-8f1167cec7ea")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR031")
 					(unit 1)
@@ -15945,7 +15945,7 @@
 			(uuid "3ae012db-9c97-4a57-8b26-bac8bb497320")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR098")
 					(unit 1)
@@ -16077,7 +16077,7 @@
 			(uuid "d738087e-0517-4a2a-954f-3ec6c90b4d49")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C52")
 					(unit 1)
@@ -16142,7 +16142,7 @@
 			(uuid "7219ab1f-3705-4a94-bdff-ef06785f1a7b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR052")
 					(unit 1)
@@ -16208,7 +16208,7 @@
 			(uuid "a28c6c90-e4e3-4c66-971a-d8a901136e8c")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0108")
 					(unit 1)
@@ -16331,7 +16331,7 @@
 			(uuid "a7ad39fd-8280-4617-9280-721f5a233707")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R23")
 					(unit 1)
@@ -16397,7 +16397,7 @@
 			(uuid "5221aa89-8caa-441a-8708-b3e874a08ee3")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR088")
 					(unit 1)
@@ -16529,7 +16529,7 @@
 			(uuid "5abd4502-2aa1-47b7-9f98-44b599547047")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C10")
 					(unit 1)
@@ -16594,7 +16594,7 @@
 			(uuid "5ced0fff-1df8-4c4d-9aff-8e04d9ea7e08")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR084")
 					(unit 1)
@@ -16660,7 +16660,7 @@
 			(uuid "7dd47293-32a5-41f4-95b1-e4df9a4cceb6")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR026")
 					(unit 1)
@@ -16726,7 +16726,7 @@
 			(uuid "0a4a7f7a-a705-4058-9a19-9fecdb04a638")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR086")
 					(unit 1)
@@ -16791,7 +16791,7 @@
 			(uuid "edd8459b-678f-4094-8052-31be26610b41")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR068")
 					(unit 1)
@@ -16863,7 +16863,7 @@
 			(uuid "6b674967-884f-41f4-ae79-63c755f338f7")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D12")
 					(unit 1)
@@ -16995,7 +16995,7 @@
 			(uuid "3ae12bea-ec85-4eec-a2b5-8fa896426acd")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C25")
 					(unit 1)
@@ -17061,7 +17061,7 @@
 			(uuid "dc9a86b6-00a9-47e0-b5f9-a8e272e10b87")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR090")
 					(unit 1)
@@ -17193,7 +17193,7 @@
 			(uuid "7c881f11-e297-41c9-aa0b-a068b94ce32e")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C57")
 					(unit 1)
@@ -17258,7 +17258,7 @@
 			(uuid "dc165602-8d07-41c2-bb41-5327b8a60a68")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR061")
 					(unit 1)
@@ -17382,7 +17382,7 @@
 			(uuid "e33135de-ac59-407c-8a41-ec4807ae744b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R20")
 					(unit 1)
@@ -17467,7 +17467,7 @@
 			(uuid "9d4047bd-a4ed-477e-a8bf-7d18955b225a")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U2")
 					(unit 1)
@@ -17599,7 +17599,7 @@
 			(uuid "fb0e2150-c394-4795-810d-86550b8c91a8")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C13")
 					(unit 1)
@@ -17671,7 +17671,7 @@
 			(uuid "e124152f-4d40-4962-bd11-82b594db2589")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D15")
 					(unit 1)
@@ -17803,7 +17803,7 @@
 			(uuid "f6ce6321-a109-4d22-9108-477c3a469733")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C20")
 					(unit 1)
@@ -17888,7 +17888,7 @@
 			(uuid "d0f9750b-5032-484c-a622-2193694f8314")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U10")
 					(unit 1)
@@ -17954,7 +17954,7 @@
 			(uuid "944ee2b1-372b-432b-a984-0951ffecd172")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR048")
 					(unit 1)
@@ -18020,7 +18020,7 @@
 			(uuid "1ee94f42-21b8-45ea-942e-0a0dbb96e46e")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR091")
 					(unit 1)
@@ -18086,7 +18086,7 @@
 			(uuid "0b23c158-a800-4067-9d22-01294074cc97")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0109")
 					(unit 1)
@@ -18152,7 +18152,7 @@
 			(uuid "868b55dd-a27a-4631-b3c8-4a96bbd76373")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR087")
 					(unit 1)
@@ -18219,7 +18219,7 @@
 			(uuid "dcd42be0-68cd-4f50-adc2-53a95a9cf5d0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0107")
 					(unit 1)
@@ -18305,7 +18305,7 @@
 			(uuid "83bf70b6-9929-4d36-af44-70aefa9efc7d")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D16")
 					(unit 1)
@@ -18428,7 +18428,7 @@
 			(uuid "206e28ce-6174-421e-bb14-f5885ddb73e0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R5")
 					(unit 1)
@@ -18559,7 +18559,7 @@
 			(uuid "cf3ab34a-37ed-4121-a58d-f51abda1135e")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C1")
 					(unit 1)
@@ -18634,7 +18634,7 @@
 			(uuid "77439aba-7c4c-4f41-997b-b70337e93aa4")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "Q2")
 					(unit 1)
@@ -18766,7 +18766,7 @@
 			(uuid "b29aa445-0867-4f86-bc45-ca4767d3e162")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C27")
 					(unit 1)
@@ -18898,7 +18898,7 @@
 			(uuid "17c2bc63-e092-4ec2-b3cd-5345d574767a")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C22")
 					(unit 1)
@@ -19020,7 +19020,7 @@
 			(uuid "ee4bad1b-8e89-4be3-9f76-106c3a03f82a")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R33")
 					(unit 1)
@@ -19106,7 +19106,7 @@
 			(uuid "675d752b-6309-4650-9891-cb367bc97b57")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D10")
 					(unit 1)
@@ -19171,7 +19171,7 @@
 			(uuid "073a7589-c248-406a-935e-be1be0f9b813")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR083")
 					(unit 1)
@@ -19292,7 +19292,7 @@
 			(uuid "4e268618-2635-44b2-8633-64340cdc0c0b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R38")
 					(unit 1)
@@ -19358,7 +19358,7 @@
 			(uuid "9b3fd9c2-b63c-493c-ba1d-d8c9f8d8482a")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0114")
 					(unit 1)
@@ -19433,7 +19433,7 @@
 			(uuid "0214cdf7-e559-4157-b34e-479836348e1f")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "Q6")
 					(unit 1)
@@ -19518,7 +19518,7 @@
 			(uuid "eb44a670-82fb-4243-bade-99ce88010646")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U8")
 					(unit 1)
@@ -19584,7 +19584,7 @@
 			(uuid "788bd1aa-10fe-43a2-a0ae-efa8d3b08aea")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0115")
 					(unit 1)
@@ -19670,7 +19670,7 @@
 			(uuid "421af9a0-140a-42f3-8094-daab18b7e1db")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D1")
 					(unit 1)
@@ -19735,7 +19735,7 @@
 			(uuid "af53b04b-b6fd-4aef-bebe-f71faf11048d")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR074")
 					(unit 1)
@@ -19867,7 +19867,7 @@
 			(uuid "35f8cc94-6705-4b84-ae88-8967c13213b0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C33")
 					(unit 1)
@@ -19932,7 +19932,7 @@
 			(uuid "fa708781-2834-409f-bf50-d479dda30302")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR059")
 					(unit 1)
@@ -20017,7 +20017,7 @@
 			(uuid "e5a4649a-5560-424a-8c75-8a0a0bc66d3a")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U16")
 					(unit 1)
@@ -20140,7 +20140,7 @@
 			(uuid "78202cc7-9ba3-4e5e-b377-76c22a10231c")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R24")
 					(unit 1)
@@ -20205,7 +20205,7 @@
 			(uuid "b6f2a953-eb53-42d0-98dc-99f1b1d6c497")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR078")
 					(unit 1)
@@ -20271,7 +20271,7 @@
 			(uuid "21f98b6e-09f4-4b5f-b2c0-9b4ca426dc07")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR037")
 					(unit 1)
@@ -20393,7 +20393,7 @@
 			(uuid "043f4f2c-76d2-4760-879a-f4b4fe2ed69c")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R41")
 					(unit 1)
@@ -20465,7 +20465,7 @@
 			(uuid "48c90623-a8a7-4d26-bfae-1d1585f067c9")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D13")
 					(unit 1)
@@ -20530,7 +20530,7 @@
 			(uuid "b120168f-7750-40e6-83e7-8fac9cdfdd19")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR065")
 					(unit 1)
@@ -20597,7 +20597,7 @@
 			(uuid "8b452d9c-c806-4268-9fe1-f2c81b7bcc9d")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0103")
 					(unit 1)
@@ -20669,7 +20669,7 @@
 			(uuid "d7112295-95b3-44a3-aeac-0b5d822debc7")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D9")
 					(unit 1)
@@ -20791,7 +20791,7 @@
 			(uuid "39fbe49c-4203-4b6d-b9f3-7f061c97a4d8")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R1")
 					(unit 1)
@@ -20857,7 +20857,7 @@
 			(uuid "30359dca-614d-43c3-8b26-d9cf2d75fa86")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0110")
 					(unit 1)
@@ -20929,7 +20929,7 @@
 			(uuid "74e1c06a-1b25-483a-84e0-c235a9279424")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D8")
 					(unit 1)
@@ -20998,7 +20998,7 @@
 			(uuid "be867f29-b251-4f4f-a54a-fc6e84e7394d")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "Rshunt1")
 					(unit 1)
@@ -21064,7 +21064,7 @@
 			(uuid "9514a537-4d5f-47d5-b9f3-a246dd6f4d5b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR028")
 					(unit 1)
@@ -21129,7 +21129,7 @@
 			(uuid "b6a004a4-2289-4555-96aa-ef15b9f37336")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR044")
 					(unit 1)
@@ -21194,7 +21194,7 @@
 			(uuid "4969fc9c-f44d-4007-ade1-d230fa43cd4f")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR064")
 					(unit 1)
@@ -21315,7 +21315,7 @@
 			(uuid "95980843-3e48-4fcc-bd2f-b2c696cc61e4")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R6")
 					(unit 1)
@@ -21382,7 +21382,7 @@
 			(uuid "e3eb8e5d-ae17-4a94-872f-f8492cb76118")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR033")
 					(unit 1)
@@ -21468,7 +21468,7 @@
 			(uuid "4874ff8d-cc68-4a59-83c0-9ee0cfcf0128")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D6")
 					(unit 1)
@@ -21554,7 +21554,7 @@
 			(uuid "3c054235-93a7-44ac-9db8-5e71a02502d4")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D17")
 					(unit 1)
@@ -21620,7 +21620,7 @@
 			(uuid "8adf9287-3275-48cb-bb1f-5aaac421c3bb")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR069")
 					(unit 1)
@@ -21751,7 +21751,7 @@
 			(uuid "8105062d-653a-46e6-9550-5fe454d72df5")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C16")
 					(unit 1)
@@ -21816,7 +21816,7 @@
 			(uuid "998004b6-9264-4099-84a0-a9db4958a468")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR075")
 					(unit 1)
@@ -21891,7 +21891,7 @@
 			(uuid "8d4ee81a-84d7-4e09-ac40-2827070ee46b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "Q3")
 					(unit 1)
@@ -22013,7 +22013,7 @@
 			(uuid "611d2db4-5578-44d8-9263-a345c02f3974")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R18")
 					(unit 1)
@@ -22079,7 +22079,7 @@
 			(uuid "0b0f56b8-f1f4-4f91-b3e3-726ce432eb8b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR093")
 					(unit 1)
@@ -22144,7 +22144,7 @@
 			(uuid "68103508-9c23-4acc-bc07-36e492f285b2")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR072")
 					(unit 1)
@@ -22209,7 +22209,7 @@
 			(uuid "5c1c8760-c6cc-45bb-a4f5-c1eefe32bdda")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0111")
 					(unit 1)
@@ -22341,7 +22341,7 @@
 			(uuid "b9f5cc5e-153c-42dd-ab2f-a7770d04a586")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C55")
 					(unit 1)
@@ -22407,7 +22407,7 @@
 			(uuid "eedabd16-38ae-420b-a862-d8bdbc55085a")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR056")
 					(unit 1)
@@ -22482,7 +22482,7 @@
 			(uuid "6357f894-8eaf-47ec-bf45-72d77b8e8e71")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "Q5")
 					(unit 1)
@@ -22548,7 +22548,7 @@
 			(uuid "b354981e-573a-4e9c-ad6a-6cfa06b73c82")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0104")
 					(unit 1)
@@ -22615,7 +22615,7 @@
 			(uuid "45a08e2e-7e1a-4755-a147-3da7b68576b4")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "TP4")
 					(unit 1)
@@ -22738,7 +22738,7 @@
 			(uuid "754df1e7-eb77-4deb-b351-559badd3e872")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R17")
 					(unit 1)
@@ -22803,7 +22803,7 @@
 			(uuid "29d32a56-3fd3-4ed7-b2f9-719fb9b972f2")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR081")
 					(unit 1)
@@ -22935,7 +22935,7 @@
 			(uuid "26d788a4-2faf-4714-aadc-2ab56e1de3fc")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C19")
 					(unit 1)
@@ -23001,7 +23001,7 @@
 			(uuid "2e9c3e62-e2cd-4b7a-80f1-fa8312c4ad68")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR077")
 					(unit 1)
@@ -23066,7 +23066,7 @@
 			(uuid "12b7949b-1e35-4876-89ff-7a77db0a8a66")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR054")
 					(unit 1)
@@ -23187,7 +23187,7 @@
 			(uuid "fe2a9296-e8ea-4e23-98c7-70ea318b953a")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R4")
 					(unit 1)
@@ -23310,7 +23310,7 @@
 			(uuid "99dbe547-6f44-4c8f-ab38-62bc8e946b92")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R43")
 					(unit 1)
@@ -23395,7 +23395,7 @@
 			(uuid "7422fe26-bbab-4a16-ba89-fd9b6f98ed32")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U7")
 					(unit 1)
@@ -23526,7 +23526,7 @@
 			(uuid "dcdd6829-2556-4e03-998a-23eec846d121")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C42")
 					(unit 1)
@@ -23591,7 +23591,7 @@
 			(uuid "12f4f5ba-2677-41bb-bad5-b901052f1f76")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR057")
 					(unit 1)
@@ -23714,7 +23714,7 @@
 			(uuid "792bdb4e-6130-4403-9c9b-56925d19ada9")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R7")
 					(unit 1)
@@ -23846,7 +23846,7 @@
 			(uuid "b1ab1539-902d-49af-b9e8-2bad867812f0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C4")
 					(unit 1)
@@ -23978,7 +23978,7 @@
 			(uuid "d0a647ed-8e42-4748-87ed-6bea8c8c4d14")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C53")
 					(unit 1)
@@ -24044,7 +24044,7 @@
 			(uuid "fdba847e-be13-413e-b865-5f858e9c1e25")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR029")
 					(unit 1)
@@ -24165,7 +24165,7 @@
 			(uuid "88bae741-0d9b-40e9-8da5-31f3e633a232")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R31")
 					(unit 1)
@@ -24251,7 +24251,7 @@
 			(uuid "72f0da91-d32f-40be-9654-81ed566328f0")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D7")
 					(unit 1)
@@ -24336,7 +24336,7 @@
 			(uuid "a0b53eb4-adb3-4c67-8fad-e22847f6e263")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U13")
 					(unit 1)
@@ -24468,7 +24468,7 @@
 			(uuid "86bc670b-8ae8-45e7-a3a4-d927c0a44afd")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C50")
 					(unit 1)
@@ -24590,7 +24590,7 @@
 			(uuid "551f868e-a396-4ec5-bf30-f39c18617514")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R32")
 					(unit 1)
@@ -24656,7 +24656,7 @@
 			(uuid "33cc6877-81b5-45c4-921a-9c7affc58894")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0105")
 					(unit 1)
@@ -24723,7 +24723,7 @@
 			(uuid "28ff27c8-d1d0-449f-9f56-76b2df7c9789")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR036")
 					(unit 1)
@@ -24855,7 +24855,7 @@
 			(uuid "447623d8-abfd-4e03-b2a7-5f6ef0d806f4")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C56")
 					(unit 1)
@@ -24921,7 +24921,7 @@
 			(uuid "6312b9e0-eed1-4dae-b8ed-855a77e4bb17")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR0113")
 					(unit 1)
@@ -25053,7 +25053,7 @@
 			(uuid "05d8843b-32f4-4ef5-91a1-a5509014da44")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C34")
 					(unit 1)
@@ -25128,7 +25128,7 @@
 			(uuid "5a63861f-8da2-4100-890d-ad173ab3824c")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "Q1")
 					(unit 1)
@@ -25193,7 +25193,7 @@
 			(uuid "052bfbb0-9cd8-440e-b991-4c915903b8c3")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR041")
 					(unit 1)
@@ -25259,7 +25259,7 @@
 			(uuid "2874aa81-b51c-41cc-9431-757a5d647e13")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR027")
 					(unit 1)
@@ -25326,7 +25326,7 @@
 			(uuid "8b62ed8b-2c30-44b4-9cd6-96d198cf6037")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR032")
 					(unit 1)
@@ -25411,7 +25411,7 @@
 			(uuid "807ace7f-ef15-4680-80ad-7ecc8a13bff7")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U1")
 					(unit 1)
@@ -25477,7 +25477,7 @@
 			(uuid "0661fd8e-ec7b-42b8-b0ba-2b968decb0c4")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR051")
 					(unit 1)
@@ -25609,7 +25609,7 @@
 			(uuid "5f0dd9c2-9e18-4ddc-8c0d-9123265ea306")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C36")
 					(unit 1)
@@ -25674,7 +25674,7 @@
 			(uuid "df2044c5-625d-4afd-8e62-2cf231346aef")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR042")
 					(unit 1)
@@ -25739,7 +25739,7 @@
 			(uuid "1b792577-b46f-46d2-9699-a04f269b0d38")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR058")
 					(unit 1)
@@ -25871,7 +25871,7 @@
 			(uuid "a6b9024d-4cbc-4f63-98fe-620262170021")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C51")
 					(unit 1)
@@ -25993,7 +25993,7 @@
 			(uuid "33d30884-742f-4e30-a5a1-31cb39591311")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R42")
 					(unit 1)
@@ -26125,7 +26125,7 @@
 			(uuid "ed5c481f-c6ce-460c-aea8-ed51b39d309b")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C26")
 					(unit 1)
@@ -26197,7 +26197,7 @@
 			(uuid "bd55b3b9-794a-48aa-94e1-4201b6822e8f")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "D14")
 					(unit 1)
@@ -26264,7 +26264,7 @@
 			(uuid "4b8582df-6531-4691-b7a5-86b5383e8fca")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR099")
 					(unit 1)
@@ -26329,7 +26329,7 @@
 			(uuid "95f93d0d-cd77-4a7c-ab6e-8f3036e50773")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR071")
 					(unit 1)
@@ -26461,7 +26461,7 @@
 			(uuid "5c37fee5-a523-4a08-8984-0fe895d4b4f0")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C18")
 					(unit 1)
@@ -26526,7 +26526,7 @@
 			(uuid "928b76f2-652e-4e94-9dd7-a93cfb35ef1d")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR043")
 					(unit 1)
@@ -26611,7 +26611,7 @@
 			(uuid "5d8948c7-a3d5-4b5c-975b-a75fb5291f32")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "U4")
 					(unit 1)
@@ -26677,7 +26677,7 @@
 			(uuid "90a37909-c5b8-4187-846f-9df459150cbf")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR034")
 					(unit 1)
@@ -26808,7 +26808,7 @@
 			(uuid "ea3a54d0-7650-4bb7-8baf-b23c78f9b16e")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C41")
 					(unit 1)
@@ -26940,7 +26940,7 @@
 			(uuid "cd61c306-b5dc-4c63-ab3e-6eebd243118d")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C12")
 					(unit 1)
@@ -27072,7 +27072,7 @@
 			(uuid "c69050c9-9bbc-446e-bb34-ae1df62acbec")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C37")
 					(unit 1)
@@ -27203,7 +27203,7 @@
 			(uuid "a35da7fa-4b78-454f-8679-e7e82eb31c5f")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C31")
 					(unit 1)
@@ -27326,7 +27326,7 @@
 			(uuid "05c30106-1fbf-4378-83c1-0e5260562de2")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "R29")
 					(unit 1)
@@ -27391,7 +27391,7 @@
 			(uuid "aa8988fc-ea66-4d0d-8a51-11d9b82e2ae7")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR085")
 					(unit 1)
@@ -27457,7 +27457,7 @@
 			(uuid "0497d4a9-e986-43af-b1aa-de018d05934f")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "#PWR063")
 					(unit 1)
@@ -27589,7 +27589,7 @@
 			(uuid "dc083b6a-506b-488f-ba24-da0a74a955b3")
 		)
 		(instances
-			(project "bldc_driver"
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C8")
 					(unit 1)
@@ -27720,7 +27720,7 @@
 			(uuid "e0050595-6bac-4976-8b6a-a6dbe4bb8386")
 		)
 		(instances
-			(project ""
+			(project "MotorControl"
 				(path "/6f0070f8-99b2-4a48-98f9-774d985c191f/19ba0eb6-9d44-4933-bb79-a8302d3dae46"
 					(reference "C48")
 					(unit 1)

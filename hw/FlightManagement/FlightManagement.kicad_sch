@@ -22066,7 +22066,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "rf.kicad_sch"
+		(property "Sheetfile" "Radio.kicad_sch"
 			(at 83.7696 69.85 90)
 			(effects
 				(font
@@ -22156,7 +22156,7 @@
 			)
 		)
 		(instances
-			(project "fmu"
+			(project "FlightManagement"
 				(path "/428dbf80-1251-4f56-8786-11b9f3c75d18"
 					(page "2")
 				)

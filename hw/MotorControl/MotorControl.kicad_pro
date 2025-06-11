@@ -470,7 +470,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "bldc_driver.kicad_pro",
+    "filename": "MotorControl.kicad_pro",
     "version": 3
   },
   "net_settings": {
