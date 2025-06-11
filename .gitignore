@@ -1,2 +1,3 @@
 hw/bldc_driver/bldc_driver-backups/*
 hw/bldc_driver/output/*
+hw/fmu/fmu/fmu-backups
