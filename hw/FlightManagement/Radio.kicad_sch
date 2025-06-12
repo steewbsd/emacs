@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "8964ae31-f1f8-41c1-a08a-c5d7e7de10d5")
 	(paper "A4")
+	(title_block
+		(company "Daniel Enrique Pérez Díaz (steewBSD)")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_Coaxial_Small"
 			(pin_numbers

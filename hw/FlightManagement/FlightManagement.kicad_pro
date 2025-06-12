@@ -450,7 +450,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "fmu.kicad_pro",
+    "filename": "FlightManagement.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -597,7 +597,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "",
+    "plot_directory": "../../misc/outputs/schem/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",

@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "428dbf80-1251-4f56-8786-11b9f3c75d18")
 	(paper "A4")
+	(title_block
+		(title "FlightManagementUnit")
+		(date "2025-06-11")
+		(rev "0")
+		(company "Daniel Enrique Pérez Díaz (steewBSD)")
+	)
 	(lib_symbols
 		(symbol "#inventree:CL21A106KOQNNNE"
 			(pin_numbers
@@ -566,6 +572,175 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "#inventree:RC0603FR-070RL"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "0 ohm"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://10.0.0.41/media/attachments/part/82/PYu-RC_Group_51_RoHS_L_12.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "RES 0 OHM JUMPER 1/10W 0603"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "InvenTree" "82"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Mounting Type" "0603"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Package Type" "0603 (1608 Metric)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Part URL" "http://10.0.0.41:7333/part/82/"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Rated Power" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Tolerance" "Jumper"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RC0603FR-070RL_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RC0603FR-070RL_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
 					(name "~"
 						(effects
 							(font
@@ -1779,6 +1954,264 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_01x06"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x06"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x06_1_1"
+				(rectangle
+					(start -1.27 6.35)
+					(end 1.27 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8251,6 +8684,18 @@
 		(uuid 0343b51c-81a6-474b-886c-9cef09b15fc9)
 	)
 	(rectangle
+		(start 21.59 95.885)
+		(end 61.595 127.635)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 0ee41b01-4e11-4370-af6d-9589702a35f9)
+	)
+	(rectangle
 		(start 15.875 146.685)
 		(end 154.305 195.58)
 		(stroke
@@ -8425,6 +8870,26 @@
 			(justify left top)
 		)
 		(uuid "b037a07a-37fe-4fd4-a5f4-8d6b5c680aab")
+	)
+	(text_box "SWD CONNECTOR"
+		(exclude_from_sim no)
+		(at 26.035 98.933 0)
+		(size 19.05 4.572)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "c635be4a-536f-46cc-b52a-e3c82691351d")
 	)
 	(text_box "IN: 8V-12V"
 		(exclude_from_sim no)
@@ -8729,6 +9194,10 @@
 		(uuid "fee96606-7490-4171-9d24-2c9dd3a4f125")
 	)
 	(no_connect
+		(at 41.91 118.11)
+		(uuid "06346d28-46de-4feb-9810-e3877ac6efda")
+	)
+	(no_connect
 		(at 213.36 146.05)
 		(uuid "d7c2c6d0-4ff8-4021-ae7e-ca18f9c37c73")
 	)
@@ -8861,6 +9330,16 @@
 			(type default)
 		)
 		(uuid "0abb38d8-8f87-405b-a64a-0d92f9f8ccb0")
+	)
+	(wire
+		(pts
+			(xy 43.18 120.65) (xy 34.29 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff0d450-6469-44ca-a28b-52c81de23c1b")
 	)
 	(wire
 		(pts
@@ -9001,6 +9480,16 @@
 			(type default)
 		)
 		(uuid "1bf56462-3921-492e-b5b9-96b067fd08a1")
+	)
+	(wire
+		(pts
+			(xy 34.29 113.03) (xy 48.26 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ebc27f6-376f-4fc2-a5f9-39caa7ba41b6")
 	)
 	(wire
 		(pts
@@ -9721,6 +10210,16 @@
 			(type default)
 		)
 		(uuid "73cffbe4-f593-4911-b36a-98bdd293d852")
+	)
+	(wire
+		(pts
+			(xy 34.29 115.57) (xy 48.26 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73fadef2-a42c-4efb-8ae1-596e10ab2a02")
 	)
 	(wire
 		(pts
@@ -10684,6 +11183,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 110.49) (xy 41.91 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3bbb0b2-b27a-494f-a654-1889ade9c3a1")
+	)
+	(wire
+		(pts
 			(xy 129.54 168.91) (xy 132.08 168.91)
 		)
 		(stroke
@@ -10901,6 +11410,16 @@
 			(type default)
 		)
 		(uuid "fbc676e5-380b-4126-873f-760d4da92a8c")
+	)
+	(wire
+		(pts
+			(xy 43.18 107.95) (xy 34.29 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fccdaae1-b86a-49b5-92d5-d7f66d950b9d")
 	)
 	(wire
 		(pts
@@ -11162,6 +11681,26 @@
 		)
 		(uuid "b952729c-ed69-4c56-916e-236e2c1332e9")
 	)
+	(label "SWDIO"
+		(at 48.26 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c47fb2cd-b668-4a05-ab2d-e69245fae7c8")
+	)
+	(label "SWCLK"
+		(at 48.26 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "db9c7c1b-1546-4171-8e54-1f40efbfb497")
+	)
 	(label "MAG_CS"
 		(at 157.48 71.12 0)
 		(effects
@@ -11191,6 +11730,16 @@
 			(justify right bottom)
 		)
 		(uuid "f11fb6cc-3ff0-4db4-8fa1-35bc508261da")
+	)
+	(label "NRESET"
+		(at 48.26 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f7f04ce4-fa05-4d26-8311-2eabbd3ee811")
 	)
 	(symbol
 		(lib_name "CL21B104KBCNNNC_2")
@@ -13447,6 +13996,71 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 43.18 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "33e98dcb-5dad-47f8-90c7-05d96c0c8749")
+		(property "Reference" "#PWR0119"
+			(at 43.18 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 39.878 122.174 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 43.18 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "153faf26-7d4d-450d-9fc0-45bd0a43ccec")
+		)
+		(instances
+			(project "FlightManagement"
+				(path "/428dbf80-1251-4f56-8786-11b9f3c75d18"
+					(reference "#PWR0119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 135.89 180.34 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14981,6 +15595,85 @@
 			(project ""
 				(path "/428dbf80-1251-4f56-8786-11b9f3c75d18"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x06")
+		(at 29.21 115.57 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5472b430-4a89-40be-85d8-eee7c6ac03f3")
+		(property "Reference" "J3"
+			(at 28.702 123.952 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "B6B-EH-A(LF)(SN)"
+			(at 25.654 116.078 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_EH_B6B-EH-A_1x06_P2.50mm_Vertical"
+			(at 29.21 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 29.21 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 29.21 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "b8a99b9e-724b-476a-bbe9-758d10444fe3")
+		)
+		(pin "3"
+			(uuid "6bea1070-ade7-45bf-976b-6e613eb611b7")
+		)
+		(pin "1"
+			(uuid "8a019c8b-1b9d-4409-8c90-a41a0933523c")
+		)
+		(pin "2"
+			(uuid "6b4d64a4-1ff8-4550-af04-090f85dedf09")
+		)
+		(pin "6"
+			(uuid "240c6d39-a876-4359-838a-eeb243751f3e")
+		)
+		(pin "5"
+			(uuid "10cdc79a-3d25-43b8-9c39-30bb9d7175b1")
+		)
+		(instances
+			(project "FlightManagement"
+				(path "/428dbf80-1251-4f56-8786-11b9f3c75d18"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -19278,6 +19971,130 @@
 		)
 	)
 	(symbol
+		(lib_id "#inventree:RC0603FR-070RL")
+		(at 38.1 118.11 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b1dce170-7efd-414f-b49f-17619b6b4430")
+		(property "Reference" "R23"
+			(at 40.64 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0 ohm"
+			(at 47.752 116.586 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 38.1 116.332 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://10.0.0.41/media/attachments/part/82/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 38.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES 0 OHM JUMPER 1/10W 0603"
+			(at 38.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "InvenTree" "82"
+			(at 38.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mounting Type" "0603"
+			(at 38.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package Type" "0603 (1608 Metric)"
+			(at 38.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part URL" "http://10.0.0.41:7333/part/82/"
+			(at 38.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Power" ""
+			(at 38.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "Jumper"
+			(at 38.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8df4100c-7021-4942-827b-b58702f59a8a")
+		)
+		(pin "1"
+			(uuid "b35c6253-ed17-48b6-9f59-a5127df13734")
+		)
+		(instances
+			(project "FlightManagement"
+				(path "/428dbf80-1251-4f56-8786-11b9f3c75d18"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 166.37 24.13 0)
 		(unit 1)
@@ -19876,6 +20693,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 43.18 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c7a362bb-13b4-4e49-b5f4-207d2179ad68")
+		(property "Reference" "#PWR0120"
+			(at 43.18 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 47.244 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 43.18 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fbc5224e-f1f6-40c8-971f-558fffccdbff")
+		)
+		(instances
+			(project "FlightManagement"
+				(path "/428dbf80-1251-4f56-8786-11b9f3c75d18"
+					(reference "#PWR0120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "CL21B104KBCNNNC_3")
 		(lib_id "#inventree:CL21B104KBCNNNC")
 		(at 166.37 29.21 180)
@@ -20003,6 +20885,130 @@
 			(project "fmu"
 				(path "/428dbf80-1251-4f56-8786-11b9f3c75d18"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "#inventree:RC0603FR-070RL")
+		(at 38.1 110.49 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cdb7f19a-93f7-4e3c-95f1-63e756efe084")
+		(property "Reference" "R22"
+			(at 40.64 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0 ohm"
+			(at 47.498 109.474 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 38.1 108.712 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://10.0.0.41/media/attachments/part/82/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 38.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES 0 OHM JUMPER 1/10W 0603"
+			(at 38.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "InvenTree" "82"
+			(at 38.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mounting Type" "0603"
+			(at 38.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package Type" "0603 (1608 Metric)"
+			(at 38.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part URL" "http://10.0.0.41:7333/part/82/"
+			(at 38.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Power" ""
+			(at 38.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "Jumper"
+			(at 38.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8649cdbd-f87d-4b1a-8820-2a039fcf1a22")
+		)
+		(pin "1"
+			(uuid "c3063266-77c1-4871-9068-f2bcf339152c")
+		)
+		(instances
+			(project "FlightManagement"
+				(path "/428dbf80-1251-4f56-8786-11b9f3c75d18"
+					(reference "R22")
 					(unit 1)
 				)
 			)
