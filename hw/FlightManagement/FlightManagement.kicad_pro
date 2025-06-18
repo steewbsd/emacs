@@ -559,14 +559,92 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part",
+          "name": "LCSC Part",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mounting Type",
+          "name": "Mounting Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PN",
+          "name": "PN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Package Type",
+          "name": "Package Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part URL",
+          "name": "Part URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Rated Power",
+          "name": "Rated Power",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Rated Voltage",
+          "name": "Rated Voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Temperature Coefficient",
+          "name": "Temperature Coefficient",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Tolerance",
+          "name": "Tolerance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "InvenTree",
+          "name": "InvenTree",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Descripción",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
-      "filter_string": "",
+      "filter_string": "C",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
-      "sort_field": "Referencia"
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -616,6 +694,10 @@
     [
       "59439b12-3d5b-4d3f-87cb-66bd691f4bfb",
       "RF"
+    ],
+    [
+      "98f1eb1c-f9f2-4688-9085-59621c0d46c9",
+      "Camera"
     ]
   ],
   "text_variables": {}
