@@ -1,0 +1,15 @@
+#+TITLE: Gilgamesh
+#+SUBTITLE: The modular quadcopter made from scratch
+
+* Overall layout
+Gilgamesh is a drone that has been designed from the start trying to maintain a sense of modularity.
+As such, the overall electrical model has been split over three main sections.
+- A flight management unit, which is responsible for aerial control and the radiofrequency links, as well as extra functionality such as camera image capture.
+- A motor controller unit, responsible for the movement, speed and control of the BLDC motors.
+- A power monitor, responsible for the monitoring of each 18650 battery cell, overall safety measures and finally distributing the power to the rest of the system.
+
+* Flight Management Unit (FlightManagement)
+
+* Motor Controller Unit (MotorControl)
+
+* Power and battery Monitoring Unit (PowerMonitor)
