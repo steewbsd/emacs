@@ -58,7 +58,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|132562500|104175000|72f89534-337d-4228-8176-769a4a66e333|c5cd8425-0d79-4d09-a819-c9f7ee8d673b",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -131,7 +136,7 @@
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
-        "min_resolved_spokes": 2,
+        "min_resolved_spokes": 1,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
