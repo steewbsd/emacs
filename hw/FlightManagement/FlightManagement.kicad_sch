@@ -11486,6 +11486,12 @@
 		(uuid "64b42a83-df08-4602-aeb2-64d889995212")
 	)
 	(junction
+		(at 261.62 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e9945e3-b270-4721-b480-b4e6ac1527a5")
+	)
+	(junction
 		(at 194.31 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11620,6 +11626,10 @@
 	(no_connect
 		(at 195.58 34.29)
 		(uuid "06346d28-46de-4feb-9810-e3877ac6efda")
+	)
+	(no_connect
+		(at 146.05 124.46)
+		(uuid "50e3b470-d7f7-46c8-a3ea-3db80a6d2293")
 	)
 	(no_connect
 		(at 240.03 109.22)
@@ -12227,7 +12237,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 151.13) (xy 265.43 151.13)
+			(xy 260.35 151.13) (xy 261.62 151.13)
 		)
 		(stroke
 			(width 0)
@@ -12394,6 +12404,16 @@
 			(type default)
 		)
 		(uuid "34becf1f-323a-4511-b8c4-1f2d8ee4a687")
+	)
+	(wire
+		(pts
+			(xy 261.62 151.13) (xy 265.43 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34fc7381-5f36-4021-97d9-6b342c9d3102")
 	)
 	(wire
 		(pts
@@ -14835,6 +14855,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 148.59) (xy 261.62 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb6fab03-2192-459e-8b0a-e09d64f75c06")
+	)
+	(wire
+		(pts
 			(xy 189.23 53.34) (xy 189.23 55.88)
 		)
 		(stroke
@@ -15220,6 +15250,16 @@
 		)
 		(uuid "65675257-d27d-41bc-9d04-87726ae73a0f")
 	)
+	(label "VIN"
+		(at 62.23 166.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "689b2dd8-bcc9-4a01-8e0f-68a18b8ffd68")
+	)
 	(label "CAMERA[14..0]"
 		(at 241.3 48.26 0)
 		(effects
@@ -15592,6 +15632,16 @@
 			(justify right bottom)
 		)
 		(uuid "f11fb6cc-3ff0-4db4-8fa1-35bc508261da")
+	)
+	(label "VDCPRE"
+		(at 261.62 148.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f2dc01a9-5774-4670-8605-eb2f8171eaa4")
 	)
 	(label "NRESET"
 		(at 209.55 26.67 0)

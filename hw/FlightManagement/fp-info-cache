@@ -1,4 +1,4 @@
-25632991651313041
+25632997453480481
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -102697,6 +102697,13 @@ USB-C-SMD_TYPE-C-6PIN-2MD-073
 18
 14
 steew
+CH347T
+
+
+0
+20
+20
+steew
 JST_VL_B02P-VL_1x02_P6.2mm_Vertical
 JST VH series connector, B2P3-VH (http://www.jst-mfg.com/product/pdf/eng/eVH.pdf), generated with kicad-footprint-generator
 connector JST VH vertical
@@ -102717,10 +102724,3 @@ MAX7044AKA
 0
 8
 8
-steew
-Untitled
-
-
-0
-0
-0
