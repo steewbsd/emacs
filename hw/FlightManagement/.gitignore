@@ -1,1 +1,3 @@
-hw/fmu/fmu/fmu-backups/*
+FlightManagement-backups/
+.*.dsn
+Outputs/

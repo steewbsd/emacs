@@ -1,0 +1,270 @@
+#![no_std]
+#![no_main]
+
+use panic_halt as _;
+extern crate cortex_m;
+#[macro_use]
+extern crate cortex_m_rt as rt;
+extern crate cortex_m_semihosting as sh;
+
+use cortex_m_rt::ExceptionFrame;
+
+#[rtic::app(device = stm32l4xx_hal::pac, peripherals = true, dispatchers = [SAI1, ADC1_2, SPI1])]
+mod app {
+    
+    use mpu6050::Mpu6050;
+    use rtic_sync::{channel::{Receiver, Sender}, make_channel};
+    use stm32l4xx_hal::{delay::Delay, flash::FlashExt, gpio::{Alternate, OpenDrain, Output, Pin, PushPull, PA6, PC14, PC15}, i2c::{self, I2c, SclPin, SdaPin}, pac::{dma1::ccr1::PL_A, I2C1, TIM7}, prelude::*, pwr::PwrExt, rcc::{ClockSecuritySystem, CrystalBypass, RccExt}, timer::{Event, Timer}};
+    use cortex_m_semihosting::hprintln;
+    use critical_section::*;
+    
+    pub enum LEDS {
+        RED,
+        GREEN
+    }
+
+    // Led blink speeds in Hz
+    #[derive(Copy, Clone)]
+    pub enum BlinkSpeed {
+        SLOW = 1,
+        MEDIUM = 3,
+        FAST = 5,
+        HOLD = 0,
+    }
+
+    #[derive(Clone, Copy, Debug)]
+    pub enum SysStatus {
+        IDLE,
+        OK,
+        FAIL,
+        BOOT,
+        TX
+    }
+
+    #[shared]
+    struct Shared {
+        status: SysStatus,
+    }
+
+    #[local]
+    struct Local {
+        
+        timer7: Timer<TIM7>,           // led blink timer
+        led_ok: PC14<Output<PushPull>>,           // green led 
+        led_fail: PC15<Output<PushPull>>,         // red led
+        txpin: PA6<Output<PushPull>>,             // outgoing transmit data
+        // mpu: Mpu6050<I2c<I2C1, (Alternate<OpenDrain, 4>, Alternate<OpenDrain, 4>)>>
+        mpu: Mpu6050<I2c<I2C1, (SclPin, SdaPin)>>
+
+    }
+
+    const CAPACITY: usize = 1;
+    #[init]
+    fn init(c: init::Context) -> (Shared, Local) {
+        let dp = c.device;
+        let mut flash = dp.FLASH.constrain(); // .constrain();
+        let mut rcc = dp.RCC.constrain();
+        let mut pwr = dp.PWR.constrain(&mut rcc.apb1r1);
+
+        let clocks = rcc.cfgr
+            .hse(12.MHz(), CrystalBypass::Disable, ClockSecuritySystem::Disable)
+            .sysclk(48.MHz())
+            .pclk1(24.MHz())
+            .pclk2(48.MHz())
+            .freeze(&mut flash.acr, &mut pwr);
+        
+        let mut timer7 = Timer::tim7(dp.TIM7, 1.Hz(), clocks, &mut rcc.apb1r1);
+        timer7.listen(stm32l4xx_hal::timer::Event::TimeOut);
+        
+        let mut gpioc = dp.GPIOC.split(&mut rcc.ahb2);
+        let mut gpioa = dp.GPIOA.split(&mut rcc.ahb2);
+        let led_ok = gpioc
+            .pc14
+            .into_push_pull_output(&mut gpioc.moder, &mut gpioc.otyper);
+        let led_fail = gpioc
+            .pc15
+            .into_push_pull_output(&mut gpioc.moder, &mut gpioc.otyper);
+        let txpin = gpioa
+            .pa6
+            .into_push_pull_output(&mut gpioa.moder, &mut gpioa.otyper);
+        
+        // initialize i2c peripheral
+        let scl = gpioa
+            .pa9
+            .into_alternate_open_drain::<4>(&mut gpioa.moder, &mut gpioa.otyper, &mut gpioa.afrh);
+        let sda = gpioa
+            .pa10
+            .into_alternate_open_drain::<4>(&mut gpioa.moder, &mut gpioa.otyper, &mut gpioa.afrh);
+
+        let iic = i2c::I2c::i2c1(dp.I2C1, (scl, sda), i2c::Config::new(400.kHz(), clocks), &mut rcc.apb1r1);
+        let mut mpu_slave_add_lsb = gpioa
+            .pa11
+            .into_push_pull_output(&mut gpioa.moder, &mut gpioa.otyper);
+        // Force low the address of the I2C IMU peripheral
+        mpu_slave_add_lsb.set_low();
+        let mut mpu = Mpu6050::new(iic);
+        let mut timer = Delay::new(c.core.SYST, clocks);
+
+        let init_result = mpu.init(&mut timer);
+        hprintln!("Initialized MPU peripheral: {:?}", init_result);
+        
+        let status = SysStatus::FAIL;
+        let (send, receive) = make_channel!(usize, CAPACITY);
+        transmitter::spawn(receive).unwrap();
+        sender1::spawn(send).unwrap();
+        
+        (Shared {status}, Local {timer7, led_ok, led_fail, txpin, mpu})
+    }
+
+    #[idle]
+    fn idle (_: idle::Context) -> ! {
+        loop {}
+    }
+
+    #[task(priority = 1)]
+    async fn sender1(_c: sender1::Context, mut sender: Sender<'static, usize, CAPACITY>) {
+        hprintln!("Sender 1 sending: 1");
+        sender.send(1).await.unwrap();
+    }
+
+    #[task(priority = 7, local = [mpu])]
+    async fn mpu_read(c: mpu_read::Context) {
+        let acc = c.local.mpu.get_acc();
+        hprintln!("Read MPU value: {:?}", acc.unwrap());
+    }
+    
+    #[task(priority = 5, local = [txpin], shared = [status])]
+    async fn transmitter(mut ctx: transmitter::Context, mut receiver: Receiver<'static, usize, CAPACITY>) {
+        hprintln!("Waiting for data to transmit");
+        // Wait until we receive data to send
+        while let Ok(data) = receiver.recv().await {
+            hprintln!("Got data to transmit: {}", data);
+            ctx.shared.status.lock(|s| {
+                *s = SysStatus::TX;
+            });
+        }
+        ctx.shared.status.lock(|s| {
+            *s = SysStatus::IDLE;
+        });
+
+    }
+
+    #[task(binds = TIM7, local = [led_ok, led_fail, timer7], shared = [status])]
+    fn status_leds (mut ctx: status_leds::Context) {
+        let mut led: LEDS = LEDS::RED;
+        let mut speed: BlinkSpeed = BlinkSpeed::FAST;
+
+        // Match the curren system status and assign a led and speed
+        ctx.shared.status.lock(|status| {
+            match status {
+                SysStatus::IDLE => {
+                    led = LEDS::GREEN;
+                    speed = BlinkSpeed::SLOW;
+                },
+                SysStatus::FAIL => {
+                    led = LEDS::RED;
+                    speed = BlinkSpeed::HOLD;
+                },
+                SysStatus::BOOT => {
+                    led = LEDS::GREEN;
+                    speed = BlinkSpeed::MEDIUM;
+                },
+                SysStatus::TX => {
+                    led = LEDS::GREEN;
+                    speed = BlinkSpeed::FAST;
+                },
+
+                _ => {
+                    led = LEDS::RED;
+                    speed = BlinkSpeed::HOLD;
+                }
+            }
+        });
+
+        // Activate selected led and force off the other
+        match led {
+            LEDS::GREEN => {
+                ctx.local.led_ok.toggle();
+                ctx.local.led_fail.set_low();
+            },
+            LEDS::RED => {
+                ctx.local.led_fail.toggle();
+                ctx.local.led_ok.set_low();
+            }
+        }
+        // ctx.local.timer7.clear_update_interrupt_flag();
+        // ctx.local.timer7.clear_interrupt(Event::TimeOut);
+        // hprintln!("{}", speed as u32);
+        ctx.local.timer7.start((speed as u32).Hz());
+        ctx.local.timer7.listen(Event::TimeOut);
+        
+    }
+}
+
+//     let mut hstdout = hio::hstdout().unwrap();
+
+//     writeln!(hstdout, "Hello, world!").unwrap();
+
+//     let cp = cortex_m::Peripherals::take().unwrap();
+//     let dp = hal::stm32::Peripherals::take().unwrap();
+
+//     let mut flash = dp.FLASH.constrain(); // .constrain();
+//     let mut rcc = dp.RCC.constrain();
+//     let mut pwr = dp.PWR.constrain(&mut rcc.apb1r1);
+
+//     // // Try a different clock configuration
+//     // let clocks = rcc.cfgr.hclk(12.MHz()).freeze(&mut flash.acr, &mut pwr);
+//     let clocks = rcc.cfgr
+//         .hse(12.MHz(), CrystalBypass::Disable, ClockSecuritySystem::Disable)
+//         .sysclk(48.MHz())
+//         .pclk1(24.MHz())
+//         .pclk2(48.MHz())
+//         .freeze(&mut flash.acr, &mut pwr);
+
+//     // let mut gpioc = dp.GPIOC.split(&mut rcc.ahb2);
+//     // let mut led = gpioc.pc14.into_push_pull_output(&mut gpioc.afrh);
+
+//     // initialize i2c peripheral
+//     let mut gpioa = dp.GPIOA.split(&mut rcc.ahb2);
+//     let scl = gpioa
+//         .pa9
+//         .into_alternate_open_drain::<4>(&mut gpioa.moder, &mut gpioa.otyper, &mut gpioa.afrh);
+//     let sda = gpioa
+//         .pa10
+//         .into_alternate_open_drain::<4>(&mut gpioa.moder, &mut gpioa.otyper, &mut gpioa.afrh);
+
+//     let iic = i2c::I2c::i2c1(dp.I2C1, (scl, sda), i2c::Config::new(400.kHz(), clocks), &mut rcc.apb1r1);
+//     let mut gpioc = dp.GPIOC.split(&mut rcc.ahb2);
+//     let mut ledg = gpioc
+//         .pc14
+//         .into_push_pull_output(&mut gpioc.moder, &mut gpioc.otyper);
+//     let mut ledr = gpioc
+//         .pc15
+//         .into_push_pull_output(&mut gpioc.moder, &mut gpioc.otyper);
+//     let mut mpu_slave_add_lsb = gpioa
+//         .pa11
+//         .into_push_pull_output(&mut gpioa.moder, &mut gpioa.otyper);
+
+//     // mpu_slave_add_lsb.set_low();
+//     let mut mpu = Mpu6050::new(iic); 
+//     let init_result = mpu.init(&mut timer);
+    
+//     loop {
+//         writeln!(hstdout,"r/p: {:?}", acc);
+
+//         // block!(timer.wait()).unwrap();
+//         timer.delay_ms(1000_u32);
+//         ledg.set_high();
+//         ledr.set_low();
+//         // block!(timer.wait()).unwrap();
+//         timer.delay_ms(1000_u32);
+//         ledg.set_low();
+//         ledr.set_high();
+
+//     }
+// }
+
+#[exception]
+unsafe fn HardFault(ef: &ExceptionFrame) -> ! {
+    panic!("{:#?}", ef);
+}

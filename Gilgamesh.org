@@ -1,5 +1,6 @@
 #+TITLE: Gilgamesh
 #+SUBTITLE: The modular quadcopter made from scratch
+#+OPTIONS: _:nil
 
 * Overall layout
 Gilgamesh is a drone that has been designed from the start trying to maintain a sense of modularity.
@@ -9,7 +10,93 @@ As such, the overall electrical model has been split over three main sections.
 - A power monitor, responsible for the monitoring of each 18650 battery cell, overall safety measures and finally distributing the power to the rest of the system.
 
 * Flight Management Unit (FlightManagement)
+The flight management unit is in charge of controlling the flight process, as well as transmitting/receiving RF data from the drone controller.
 
 * Motor Controller Unit (MotorControl)
+The motor controller unit can be split in two parts:
+** Control
+In this block we can find several parts related to the microcontroller and its PWM control.
+The relevant signals for the bridge lines firmware-wise consist of three differential pairs:
+- PH\_U\_{HI,LO}
+- PH\_V\_{HI,LO}
+- PH\_W\_{HI,LO}
 
+These three PWM signals originate from the microcontroller and go through an isolated gate driver (STGAP2SCM), which in turn powers the motor phase by driving the Power MOSFET's (IRF540N) gate accordingly.
+
+In order to sense the motor position and velocity, the phases are directly connected to a feedback loop [[./img/femfeedback.png]].
+
+The EMF (Counter Electromotive Force) that the motor windings apply to this line are sensed using a resistive divider.
+The maximum level, +-12V, gets reduced to around +-250 mV in seen in the isolated amplifier's input, which is the maximum allowed input until the comparator output is allowed to saturate. The {U,V,W}_ADC_{P,N} lines are directly fed to the microcontroller's ADC1 inputs, specifically in channels 9 to 12, making use of ST's ADC differential input functionality.
+
+The motor current is sensed via the so-called "Totem Pole" configuration, sharing the input with all the motor phases [[./img/currentsense.png]].
+
+This topology is chosen as the motor only has one current ever active in all of its phases, allowing us to share the sensing between all of them.
+
+In this configuration, the current that flows to ground from all the phases is sensed via a 15 mOhm shunt resistor feeding the same isolation amplifier as before. The microcontroller receives in its ADC1 lines the differential signal that is proportional to the flowing current, in order to constantly measure for any possible faults and overcurrents that the power system can be experiencing.
+
+
+* Motor control methodology
+** PWM signal generation
+The first step in motor control requires the generation of the PWM signals by making use of the timer peripherals present in the microcontroller.
+Due to the nature of the isolated gate drive, we need to generate a complementary PWM signal for each phase of the motor.
+
+#+NAME: pwmpins
+| Phase    | Pin  | Peripheral |
+|----------+------+------------|
+| U (High) | PA8  | TIM1_CH1   |
+| V (High) | PA9  | TIM1_CH2   |
+| W (High) | PA10 | TIM1_CH3   |
+| U (Low)  | PB13 | TIM1_CH1N  |
+| V (Low)  | PB14 | TIM1_CH2N  |
+| W (Low)  | PB15 | TIM1_CH3N  |
+
+The ST IDE allows us to generate the complementary PWM signals by using the (PWM Generation CH1 CH1N) option, which will automatically assign the pins shown in table [[pwmpins]] for the positive and negative channels [[./img/pwmcomp.png]].
+
+** Phase signal feedback
+At any moment only two phases should be powered, one with the high side (positive) and the next one with the low side (negative).
+After powering the phases with the appropriate PWM signals, a counter electromotive force will be applied to the unused (open) phase, which will allow us to find the rotor position at any moment and sychronize the stator phase control for proper movement.
+
+In this case, we have three isolation amplifiers directly connected to the phase windings output, which will output a signal from -250 to 250 millivolts.
+The appropriate ADCs that are used to measure this voltage are the following:
+
+| Signal | ADC  | Pin | Channel |
+|--------+------+-----+---------|
+| U HIGH | ADC1 | PA0 | 9       |
+| U LOW  | ADC1 | PA1 | 9N      |
+| V HIGH | ADC1 | PA2 | 10      |
+| V LOW  | ADC1 | PA3 | 10N     |
+| W HIGH | ADC1 | PA4 | 11      |
+| W LOW  | ADC1 | PA5 | 11N     |
+
+[[./img/adcinputs.png]]
+
+The channels marked with an N are just referring to the negative inputs of the ADC.
+The STM32 IDE allows us to make use of the fully differential inputs of the ADCs by selecting the IN5,7 and 9 inputs in "INX Differential" mode, which will automatically assign the appropriate pins of the microcontroller.
+
+[[./img/inverter.png]]
+
+** Control scheme
+[[https://www.ti.com/video/6011229676001]]
+[[https://www.tij.co.jp/lit/an/sprabq7a/sprabq7a.pdf][TI's application note on sensorless trapezoidal BLDC control]]
+
+The control process can be divided in three steps:
+*** Find out the initial position of the rotor
+To find the position of the rotor in the steady state, we would need to make use of any kind of magnetic sensor like Hall effect ones. Unfortunately, due to the design criteria that has been chosen, there is no direct way to find out the state of the rotor if the system is coming from the steady state, as we depend on EMF currents to find out which winding is closest to the rotor. With no prior movement, no back EMF force is generated, thus rendering our circuit unusable for this task. In order to work around this limitation, the system will be required to power up the motor slowly until it is possible to find out the position via the established means.
+
+*** Find out the target speed
+A series of CAN messages will be received by the host motor controller and ought to be interpreted accordingly. Target speed messages will announce the need to pursue a different motor velocity.
+
+
+*** Start the PWM generation
+Once we have established the relationship between the desired control speed and the PWM signal structure, we can proceed with the phase conmutation.
+
+** Power and MCU
+The microcontroller block consists of the following parts:
+- The microcontroller
+- The CAN receiver
+- The voltage regulator.
+
+The microcontroller section is governed by ST's STM32L431CCT6. It should act as a CAN slave, receiving control signals from the flight control unit. It should also send any requested information via this same channel.
+** Power up sequence
 * Power and battery Monitoring Unit (PowerMonitor)
+

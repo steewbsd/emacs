@@ -1,3 +1,9 @@
 hw/bldc_driver/bldc_driver-backups/*
 hw/bldc_driver/output/*
 hw/fmu/fmu/fmu-backups
+*.zip
+/hw/FlightManagement/freerouting.dsn
+/hw/FlightManagement/temp-freerouting.dsn
+/hw/FlightManagement/Outputs/
+/fw/RustFM/target/
+/fw/RustFM/target

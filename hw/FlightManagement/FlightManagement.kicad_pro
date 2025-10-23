@@ -458,6 +458,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -527,7 +528,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Outputs/Gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -599,13 +600,13 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
           "label": "LCSC Part",
           "name": "LCSC Part",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -617,7 +618,7 @@
           "group_by": false,
           "label": "PN",
           "name": "PN",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -635,13 +636,13 @@
           "group_by": false,
           "label": "Rated Power",
           "name": "Rated Power",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Rated Voltage",
           "name": "Rated Voltage",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -680,7 +681,7 @@
           "show": false
         }
       ],
-      "filter_string": "C",
+      "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
