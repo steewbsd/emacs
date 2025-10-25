@@ -5,15 +5,16 @@ edition = "2021"
 
 [dependencies]
 embedded-hal = "0.2.7"
-nb = "1"
-cortex-m = {version = "0.7.7", features = ["critical-section-single-core"]}
+nb = "1.1.0"
+cortex-m = {git = "https://github.com/rust-embedded/cortex-m", features = ["critical-section-single-core"]}
 critical-section = { version = "1.2.0" }
 cortex-m-rt ="0.7.5"
 panic-halt = "0.2.0"
 panic-semihosting = "0.6.0"
 cortex-m-semihosting = "0.5.0"       
-mpu6050 = "0.1.6"
-embedded-hal-compat = "0.13.0"
+# mpu6050 = "0.1.6"
+mpu6050-dmp = "0.6.1"
+# embedded-hal-compat = "0.13.0"
 rtic = {version = "2.2.0", features=["thumbv7-backend"]}
 rtic-sync = "1.4.0"
 # rtic-monotonics = {version = "2.1.0", features = ["stm32_tim3", "stm32l431rc"]}
