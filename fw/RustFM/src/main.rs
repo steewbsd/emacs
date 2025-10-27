@@ -13,8 +13,9 @@ use cortex_m_rt::ExceptionFrame;
 mod app {
 
 
+    use core::any::Any;
     use cortex_m_semihosting::hprintln;
-    use embedded_hal_compat::{ForwardCompat, ReverseCompat};
+    // use embedded_hal_compat::{ForwardCompat, ReverseCompat};
     // use critical_section::*;
     // use mpu6050::{device::CLKSEL, Mpu6050};
     use mpu6050_dmp::{address::Address, sensor::Mpu6050};
@@ -89,7 +90,7 @@ mod app {
         led_fail: PC15<Output<PushPull>>, // red led
         txpin: PA6<Output<PushPull>>,     // outgoing transmit data
         imu_int: PA12<Input<PullDown>>,
-        mpu: Mpu6050<I2c<I2C1, (PA9<Alternate<OpenDrain, 4>>, PA10<Alternate<OpenDrain, 4>>)>>,
+        mpu: Mpu6050<I2c<I2C1, (PA9<Alternate<OpenDrain, 4>>, PA10<Alternate<OpenDrain, 4>>)>>
         // mpu: Mpu6050<I2c>,
     }
 
@@ -163,7 +164,7 @@ mod app {
         // Force low the address of the I2C IMU peripheral
         // mpu_slave_add_lsb.set_low();
         // let mut mpu = Mpu6050::new(iic);
-        // let mut timer = Delay::new(c.core.SYST, clocks);
+        let mut timer = Delay::new(c.core.SYST, clocks);
 
         // let init_result = mpu.init(&mut timer);
         // // Set the mpu clock source to the x axis gyroscope
@@ -176,6 +177,11 @@ mod app {
         // mpu.write_bit(MpuRegs::INT_ENABLE.into(), 0, false).unwrap();
 
         let mut mpu = Mpu6050::new(iic, Address::default()).unwrap();
+        mpu.initialize_dmp(&mut timer).unwrap();
+        mpu.enable_dmp().unwrap();
+        mpu.boot_firmware().unwrap();
+
+        // mpu.disable_dmp
         
         let (send, receive) = make_channel!(usize, CAPACITY);
         transmitter::spawn(receive).unwrap();
@@ -206,18 +212,20 @@ mod app {
         sender.send(1).await.unwrap();
     }
 
-    #[task(binds = EXTI15_10, priority = 7, local = [imu_int])]
+    #[task(binds = EXTI15_10, priority = 7, local = [mpu, imu_int])]
     fn mpu_read(c: mpu_read::Context) {
-        let acc = c.local.mpu.get_acc();
+        // let acc = c.local.mpu.get_acc();
+        let acc = c.local.mpu.gyro();
+        c.local.mpu.get_fifo_count().unwrap();
         hprintln!("Read MPU value: {:?}", acc.unwrap());
-        hprintln!("Read TEMP value: {:?}", c.local.mpu.get_temp().unwrap());
+        // hprintln!("Read TEMP value: {:?}", c.local.mpu.get_temp().unwrap());
 
-        c.local.imu_int.clear_interrupt_pending_bit();
+        // c.local.imu_int.clear_interrupt_pending_bit();
         // Clear the interrupt after reading the INT status register
-        c.local
-            .mpu
-            .read_bits(MpuRegs::INT_STATUS.into(), 0, 0)
-            .unwrap();
+        // c.local
+        //     .mpu
+        //     .read_bits(MpuRegs::INT_STATUS.into(), 0, 0)
+        //     .unwrap();
     }
 
     #[task(priority = 5, local = [txpin], shared = [status])]
@@ -229,6 +237,7 @@ mod app {
         // Wait until we receive data to send
         while let Ok(data) = receiver.recv().await {
             hprintln!("Got data to transmit: {}", data);
+            // TODO: transmit data and delay
             ctx.shared.status.lock(|s| {
                 *s = SysStatus::TX;
             });
@@ -285,72 +294,4 @@ mod app {
         ctx.local.timer7.start((speed as u32).Hz());
         ctx.local.timer7.listen(Event::TimeOut);
     }
-}
-
-//     let mut hstdout = hio::hstdout().unwrap();
-
-//     writeln!(hstdout, "Hello, world!").unwrap();
-
-//     let cp = cortex_m::Peripherals::take().unwrap();
-//     let dp = hal::stm32::Peripherals::take().unwrap();
-
-//     let mut flash = dp.FLASH.constrain(); // .constrain();
-//     let mut rcc = dp.RCC.constrain();
-//     let mut pwr = dp.PWR.constrain(&mut rcc.apb1r1);
-
-//     // // Try a different clock configuration
-//     // let clocks = rcc.cfgr.hclk(12.MHz()).freeze(&mut flash.acr, &mut pwr);
-//     let clocks = rcc.cfgr
-//         .hse(12.MHz(), CrystalBypass::Disable, ClockSecuritySystem::Disable)
-//         .sysclk(48.MHz())
-//         .pclk1(24.MHz())
-//         .pclk2(48.MHz())
-//         .freeze(&mut flash.acr, &mut pwr);
-
-//     // let mut gpioc = dp.GPIOC.split(&mut rcc.ahb2);
-//     // let mut led = gpioc.pc14.into_push_pull_output(&mut gpioc.afrh);
-
-//     // initialize i2c peripheral
-//     let mut gpioa = dp.GPIOA.split(&mut rcc.ahb2);
-//     let scl = gpioa
-//         .pa9
-//         .into_alternate_open_drain::<4>(&mut gpioa.moder, &mut gpioa.otyper, &mut gpioa.afrh);
-//     let sda = gpioa
-//         .pa10
-//         .into_alternate_open_drain::<4>(&mut gpioa.moder, &mut gpioa.otyper, &mut gpioa.afrh);
-
-//     let iic = i2c::I2c::i2c1(dp.I2C1, (scl, sda), i2c::Config::new(400.kHz(), clocks), &mut rcc.apb1r1);
-//     let mut gpioc = dp.GPIOC.split(&mut rcc.ahb2);
-//     let mut ledg = gpioc
-//         .pc14
-//         .into_push_pull_output(&mut gpioc.moder, &mut gpioc.otyper);
-//     let mut ledr = gpioc
-//         .pc15
-//         .into_push_pull_output(&mut gpioc.moder, &mut gpioc.otyper);
-//     let mut mpu_slave_add_lsb = gpioa
-//         .pa11
-//         .into_push_pull_output(&mut gpioa.moder, &mut gpioa.otyper);
-
-//     // mpu_slave_add_lsb.set_low();
-//     let mut mpu = Mpu6050::new(iic);
-//     let init_result = mpu.init(&mut timer);
-
-//     loop {
-//         writeln!(hstdout,"r/p: {:?}", acc);
-
-//         // block!(timer.wait()).unwrap();
-//         timer.delay_ms(1000_u32);
-//         ledg.set_high();
-//         ledr.set_low();
-//         // block!(timer.wait()).unwrap();
-//         timer.delay_ms(1000_u32);
-//         ledg.set_low();
-//         ledr.set_high();
-
-//     }
-// }
-
-#[exception]
-unsafe fn HardFault(ef: &ExceptionFrame) -> ! {
-    panic!("{:#?}", ef);
 }
