@@ -3,22 +3,21 @@
 
 use panic_halt as _;
 extern crate cortex_m;
-#[macro_use]
+// #[macro_use]
 extern crate cortex_m_rt as rt;
 extern crate cortex_m_semihosting as sh;
-
-use cortex_m_rt::ExceptionFrame;
 
 #[rtic::app(device = stm32l4xx_hal::pac, peripherals = true, dispatchers = [SAI1, ADC1_2, SPI1])]
 mod app {
 
-
-    use core::any::Any;
     use cortex_m_semihosting::hprintln;
     // use embedded_hal_compat::{ForwardCompat, ReverseCompat};
     // use critical_section::*;
     // use mpu6050::{device::CLKSEL, Mpu6050};
     use mpu6050_dmp::{address::Address, sensor::Mpu6050};
+    use rtic_monotonics::{stm32::prelude::*, stm32_tim2_monotonic};
+    stm32_tim2_monotonic!(Mono, 100);
+
     use rtic_sync::{
         channel::{Receiver, Sender},
         make_channel,
@@ -27,8 +26,8 @@ mod app {
         delay::Delay,
         flash::FlashExt,
         gpio::{
-            Alternate, Input, OpenDrain, Output, PullDown, PushPull, PA10, PA12, PA6, PA9,
-            PC14, PC15,
+            Alternate, Input, OpenDrain, Output, PullDown, PushPull, PA10, PA12, PA6, PA9, PC14,
+            PC15,
         },
         i2c::{self, I2c},
         pac::{I2C1, NVIC, TIM7},
@@ -64,7 +63,8 @@ mod app {
     // Led blink speeds in Hz
     #[derive(Copy, Clone)]
     pub enum BlinkSpeed {
-        SLOW = 1,        MEDIUM = 3,
+        SLOW = 1,
+        MEDIUM = 3,
         FAST = 5,
         HOLD = 0,
     }
@@ -90,8 +90,7 @@ mod app {
         led_fail: PC15<Output<PushPull>>, // red led
         txpin: PA6<Output<PushPull>>,     // outgoing transmit data
         imu_int: PA12<Input<PullDown>>,
-        mpu: Mpu6050<I2c<I2C1, (PA9<Alternate<OpenDrain, 4>>, PA10<Alternate<OpenDrain, 4>>)>>
-        // mpu: Mpu6050<I2c>,
+        mpu: Mpu6050<I2c<I2C1, (PA9<Alternate<OpenDrain, 4>>, PA10<Alternate<OpenDrain, 4>>)>>, // mpu: Mpu6050<I2c>,
     }
 
     const CAPACITY: usize = 1;
@@ -119,15 +118,27 @@ mod app {
 
         let mut gpioc = dp.GPIOC.split(&mut rcc.ahb2);
         let mut gpioa = dp.GPIOA.split(&mut rcc.ahb2);
+        let mut gpiob = dp.GPIOB.split(&mut rcc.ahb2);
+
         let led_ok = gpioc
             .pc14
             .into_push_pull_output(&mut gpioc.moder, &mut gpioc.otyper);
         let led_fail = gpioc
             .pc15
             .into_push_pull_output(&mut gpioc.moder, &mut gpioc.otyper);
-        let txpin = gpioa
+        let mut txpin = gpioa
             .pa6
             .into_push_pull_output(&mut gpioa.moder, &mut gpioa.otyper);
+        let mut rxen = gpiob
+            .pb0
+            .into_push_pull_output(&mut gpiob.moder, &mut gpiob.otyper);
+        let mut txen = gpiob
+            .pb1
+            .into_push_pull_output(&mut gpiob.moder, &mut gpiob.otyper);
+
+        // setup for transmission
+        rxen.set_high();
+        txen.set_low();
 
         // initialize i2c peripheral
         let scl = gpioa.pa9.into_alternate_open_drain::<4>(
@@ -162,9 +173,16 @@ mod app {
             .pa11
             .into_push_pull_output(&mut gpioa.moder, &mut gpioa.otyper);
         // Force low the address of the I2C IMU peripheral
-        // mpu_slave_add_lsb.set_low();
+        mpu_slave_add_lsb.set_low();
         // let mut mpu = Mpu6050::new(iic);
-        let mut timer = Delay::new(c.core.SYST, clocks);
+        let mut delay = Delay::new(c.core.SYST, clocks);
+
+        // init sequence for max7044
+        txpin.set_low();
+        delay.delay_ms(1_u32);
+        txpin.set_high();
+        delay.delay_ms(1_u32);
+        txpin.set_low();
 
         // let init_result = mpu.init(&mut timer);
         // // Set the mpu clock source to the x axis gyroscope
@@ -177,16 +195,21 @@ mod app {
         // mpu.write_bit(MpuRegs::INT_ENABLE.into(), 0, false).unwrap();
 
         let mut mpu = Mpu6050::new(iic, Address::default()).unwrap();
-        mpu.initialize_dmp(&mut timer).unwrap();
+        mpu.initialize_dmp(&mut delay).unwrap();
         mpu.enable_dmp().unwrap();
         mpu.boot_firmware().unwrap();
+        mpu.set_clock_source(mpu6050_dmp::clock_source::ClockSource::Xgyro)
+            .unwrap();
+
+        Mono::start(12_000_000);
 
         // mpu.disable_dmp
-        
+
+        #[allow(unused_variables)]
         let (send, receive) = make_channel!(usize, CAPACITY);
         transmitter::spawn(receive).unwrap();
-        sender1::spawn(send).unwrap();
-        
+        // sender1::spawn(send).unwrap();
+
         let status = SysStatus::FAIL;
         (
             Shared { status },
@@ -207,9 +230,12 @@ mod app {
     }
 
     #[task(priority = 1)]
-    async fn sender1(_c: sender1::Context, mut sender: Sender<'static, usize, CAPACITY>) {
-        hprintln!("Sender 1 sending: 1");
-        sender.send(1).await.unwrap();
+    async fn sender1(_: sender1::Context, mut sender: Sender<'static, usize, CAPACITY>) {
+        loop {
+            // hprintln!("Sender 1 sending: 1");
+            sender.send(1).await.unwrap();
+            Mono::delay(50_u64.millis()).await
+        }
     }
 
     #[task(binds = EXTI15_10, priority = 7, local = [mpu, imu_int])]
@@ -235,13 +261,14 @@ mod app {
     ) {
         hprintln!("Waiting for data to transmit");
         // Wait until we receive data to send
-        while let Ok(data) = receiver.recv().await {
-            hprintln!("Got data to transmit: {}", data);
-            // TODO: transmit data and delay
+        while let Ok(_data) = receiver.recv().await {
+            // hprintln!("Got data to transmit: {}", data);
             ctx.shared.status.lock(|s| {
                 *s = SysStatus::TX;
             });
+            ctx.local.txpin.toggle();
         }
+        hprintln!("No more data received.");
         ctx.shared.status.lock(|s| {
             *s = SysStatus::IDLE;
         });
