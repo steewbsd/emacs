@@ -10,9 +10,9 @@
 # runner = "gdb -q -x openocd.gdb"
 runner = "probe-rs run --chip STM32L431RCTx"
 
-# rustflags = [
+rustflags = [
   # LLD (shipped with the Rust toolchain) is used as the default linker
-  # "-C", "link-arg=-Tlink.x",
+  "-C", "link-arg=-Tlink.x",
 
   # if you run into problems with LLD switch to the GNU linker by commenting out
   # this line
@@ -24,7 +24,7 @@ runner = "probe-rs run --chip STM32L431RCTx"
   # "-C", "linker=arm-none-eabi-gcc",
   # "-C", "link-arg=-Wl,-Tlink.x",
   # "-C", "link-arg=-nostartfiles",
-# ]
+]
 
 [build]
 # Pick ONE of these compilation targets
